@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projects | Bella Dougherty</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fafafa;
+      color: #222;
+    }
+
+    /* NAVBAR */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 40px;
+      background: white;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin-left: 20px;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #0077b6;
+    }
+
+    /* PAGE LAYOUT */
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 60px 20px 80px;
+    }
+
+    h1 {
+      font-size: 38px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: #777;
+      margin-bottom: 30px;
+      max-width: 650px;
+    }
+
+    h2 {
+      font-size: 26px;
+      margin-top: 40px;
+      margin-bottom: 10px;
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 15px;
+    }
+
+    .card {
+      background: white;
+      padding: 18px;
+      border-radius: 10px;
+      border: 1px solid #e5e5e5;
+      transition: 0.2s;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .card:hover {
+      border-color: #bbb;
+      transform: translateY(-3px);
+    }
+
+    .thumb-placeholder {
+      width: 100%;
+      height: 150px;
+      border-radius: 8px;
+      background: #e5e5e5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: #666;
+      border: 1px dashed #ccc;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .card .tagline {
+      font-size: 14px;
+      color: #777;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 15px;
+      margin: 0;
+    }
+
+    .meta {
+      font-size: 13px;
+      color: #777;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      font-size: 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      background: #0077b6;
+      color: white;
+      cursor: pointer;
+      border: none;
+      align-self: flex-start;
+    }
+
+    .btn:hover {
+      background: #005f8c;
+    }
+
+    .coming-soon {
+      font-size: 13px;
+      color: #999;
+      margin-top: 6px;
+    }
+
+    footer {
+      background: #111;
+      color: #eee;
+      text-align: center;
+      padding: 30px 10px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #f3f4f6;
+      text-decoration: underline;
+    }
+
+    footer a:hover {
+      color: #e0f2fe;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div style="font-weight: 700; font-size: 18px;">Bella Dougherty</div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="Aboutme.html">About</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <h1>Projects</h1>
+    <p class="subtitle">
+      A closer look at three GIS projects from my coursework, focusing on flood risk, environmental health,
+      and spatial databases. Images and live links are placeholders for now and will be updated as I publish each project.
+    </p>
+
+    <div class="grid">
+
+      <!-- Cedar Rapids Flood Analysis -->
+      <div class="card">
+        <div class="thumb-placeholder">
+          Map image placeholder (Cedar Rapids flood extent)
+        </div>
+        <h3>Cedar Rapids Flood Analysis</h3>
+        <div class="tagline">LiDAR · DEM/DSM · Hydrology tools</div>
+        <p>
+          Modeled potential flood-prone areas in downtown Cedar Rapids using LiDAR-derived DEM/DSM surfaces,
+          flow accumulation, and hydrologic tools to identify high-risk zones and visualize flood patterns.
+        </p>
+        <div class="meta">Tools: QGIS, LiDAR, hydrology toolbox</div>
+        <a href="project-flood.html" class="btn">View Project (coming soon)</a>
+        <div class="coming-soon">Placeholder page & image – final maps to be added.</div>
+      </div>
+
+      <!-- Agricultural Runoff & Childhood Cancer -->
+      <div class="card">
+        <div class="thumb-placeholder">
+          Choropleth map placeholder (Iowa counties & health data)
+        </div>
+        <h3>Agricultural Runoff & Childhood Cancer</h3>
+        <div class="tagline">Environmental health · Spatial statistics</div>
+        <p>
+          Investigating potential relationships between agricultural intensity, nitrate levels,
+          and childhood cancer rates across Iowa counties using GIS, groundwater data, and health indicators.
+        </p>
+        <div class="meta">Tools: GIS, county-level datasets, statistical analysis</div>
+        <a href="project-runoff.html" class="btn">View Project (coming soon)</a>
+        <div class="coming-soon">Placeholder for project write-up, figures, and maps.</div>
+      </div>
+
+      <!-- Cedar Rapids GIS Database (PostGIS) -->
+      <div class="card">
+        <div class="thumb-placeholder">
+          Database schema / ERD placeholder (PostGIS)
+        </div>
+        <h3>Cedar Rapids GIS Database (PostGIS)</h3>
+        <div class="tagline">PostGIS · SQL · Accessibility analysis</div>
+        <p>
+          Designed a spatial database integrating block group demographics, trails, and parks
+          to evaluate access to green space and trail networks across Cedar Rapids, including schema design and SQL queries.
+        </p>
+        <div class="meta">Tools: PostGIS, pgAdmin, SQL, QGIS</div>
+        <a href="project-database.html" class="btn">View Project (coming soon)</a>
+        <div class="coming-soon">Placeholder for SQL snippets, ER diagrams, and result maps.</div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    © <span id="year"></span> Bella Dougherty · 
+    Email: <a href="mailto:belladougherty222@gmail.com">belladougherty222@gmail.com</a>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
