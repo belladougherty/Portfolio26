@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Resume | Bella Dougherty</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fafafa;
+      color: #222;
+    }
+
+    /* NAVBAR (same style as index) */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 40px;
+      background: white;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin-left: 20px;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #0077b6;
+    }
+
+    /* PAGE LAYOUT */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 20px 80px;
+    }
+
+    h1 {
+      font-size: 34px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-top: 40px;
+      margin-bottom: 12px;
+    }
+
+    h3 {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    h4 {
+      font-size: 18px;
+      margin: 4px 0;
+    }
+
+    .org {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 15px;
+      color: #444;
+    }
+
+    /* TIMELINE STYLE */
+    .timeline {
+      border-left: 2px solid #ddd;
+      margin-top: 10px;
+      padding-left: 22px;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 26px;
+      padding-left: 4px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -12px;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #0077b6;
+    }
+
+    .subtle {
+      color: #777;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    /* LISTS */
+    ul {
+      padding-left: 18px;
+      margin-top: 6px;
+      margin-bottom: 0;
+    }
+
+    ul li {
+      font-size: 15px;
+      margin-bottom: 4px;
+      color: #444;
+    }
+
+    /* BUTTON / LINK */
+    .btn {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 10px 20px;
+      font-size: 15px;
+      border-radius: 6px;
+      text-decoration: none;
+      background: #0077b6;
+      color: white;
+    }
+
+    .btn:hover {
+      background: #005f8c;
+    }
+
+    .download-section {
+      margin-top: 40px;
+      padding-top: 18px;
+      border-top: 1px solid #ddd;
+    }
+
+    /* CONTACT FOOTER */
+    footer {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    .contact-link {
+      color: #0077b6;
+      text-decoration: none;
+    }
+
+    .contact-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div style="font-weight: 700; font-size: 18px;">Bella Dougherty</div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <h1>RESUME</h1>
+    <p class="subtle">
+      A snapshot of my professional experience, education, and skills.  
+      For a full version, download the PDF at the bottom of this page.
+    </p>
+
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <h2>Professional Experience</h2>
+    <div class="timeline">
+
+      <!-- Example experience 1 – edit dates/details to be accurate -->
+      <div class="timeline-item">
+        <h3>May 2024 – Aug 2024</h3>
+        <div class="org">Cedar Rapids Water Department</div>
+        <h4>GIS / Water Resources Intern</h4>
+        <p>
+          Supported water infrastructure and planning projects using GIS tools and spatial data.
+        </p>
+        <ul>
+          <li>Processed and cleaned spatial datasets for water mains, hydrants, and service areas.</li>
+          <li>Created maps and basic analyses to support maintenance planning and asset management.</li>
+          <li>Collaborated with staff on data collection workflows and documentation.</li>
+        </ul>
+      </div>
+
+      <!-- Example experience 2 – class / research style experience -->
+      <div class="timeline-item">
+        <h3>2023 – 2025</h3>
+        <div class="org">University of Iowa · Course & Project Work</div>
+        <h4>GIS & Spatial Analysis Projects</h4>
+        <p>
+          Completed multiple applied GIS projects focusing on environmental risk, health, and urban access.
+        </p>
+        <ul>
+          <li>Modeled flood exposure in downtown Cedar Rapids using LiDAR-derived DEMs and hydrology tools.</li>
+          <li>Analyzed agricultural runoff and potential links to childhood cancer risk across Iowa counties.</li>
+          <li>Built a PostGIS database integrating trails, parks, and demographic data to assess access to green space.</li>
+        </ul>
+      </div>
+
+      <!-- You can add more positions here later -->
+      <!--
+      <div class="timeline-item">
+        <h3>Month Year – Month Year</h3>
+        <div class="org">Organization Name</div>
+        <h4>Position Title</h4>
+        <p>Short role description.</p>
+        <ul>
+          <li>Bullet point describing what you did.</li>
+          <li>Another bullet.</li>
+        </ul>
+      </div>
+      -->
+
+    </div>
+
+    <!-- EDUCATION -->
+    <h2>Education</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>Expected May 2026</h3>
+        <div class="org">University of Iowa · Iowa City, IA</div>
+        <h4>B.A. in Geography (GIS Track)</h4>
+        <p>
+          Coursework includes GIS, LiDAR, spatial databases, environmental policy, statistics, and political science.
+        </p>
+        <ul>
+          <li>Advanced GIS, LiDAR and Terrain Analysis, Intro to Geographic Databases (PostGIS/pgAdmin).</li>
+          <li>Health & Environment GIS, Hydrologic Modeling, Spatial Statistics.</li>
+          <li>Spanish, Political Science (public opinion, elections), and environmental policy courses.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- SKILLS -->
+    <h2>Technical Skills</h2>
+    <p>
+      <strong>GIS & Remote Sensing:</strong> QGIS, ArcGIS Pro, LiDAR/DEM/DSM processing, hydrology tools (flow accumulation, watershed analysis)  
+      <br>
+      <strong>Databases & Programming:</strong> PostGIS, pgAdmin, SQL  
+      <br>
+      <strong>Statistics & Analysis:</strong> Stata, regression and spatial analysis concepts  
+      <br>
+      <strong>Other:</strong> Cartography, report writing, research design, public speaking
+    </p>
+
+    <!-- AWARDS / INTERESTS (optional, edit as you like) -->
+    <h2>Interests</h2>
+    <p>
+      Flood risk and climate resilience, environmental health, conservation GIS, spatial databases,
+      and using maps to communicate complex social and environmental issues.
+    </p>
+
+    <!-- DOWNLOAD RESUME PDF -->
+    <div class="download-section">
+      <h2>Download Full Resume (PDF)</h2>
+      <p class="subtle">
+        For complete details, including additional roles, coursework, and projects, view my full resume as a PDF.
+      </p>
+
+      <!-- Uses your exact current filename -->
+      <a
+        class="btn"
+        href="Bella%20Dougherty%20(1).pdf"
+        target="_blank"
+        rel="noopener"
+      >
+        Download Resume – PDF
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    Questions or opportunities? Email me at
+    <a class="contact-link" href="mailto:your.email@uiowa.edu">your.email@uiowa.edu</a>.
+  </footer>
+
+</body>
+</html>
