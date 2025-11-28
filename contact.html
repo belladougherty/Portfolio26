@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact | Bella Dougherty</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fafafa;
+      color: #222;
+    }
+
+    /* NAVBAR */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 40px;
+      background: white;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin-left: 20px;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #0077b6;
+    }
+
+    /* PAGE LAYOUT */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 70px 20px 100px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 38px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    p {
+      font-size: 17px;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 25px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .contact-box {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      border: 1px solid #e5e5e5;
+      max-width: 500px;
+      margin: 40px auto;
+      font-size: 17px;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    .contact-box a {
+      color: #0077b6;
+      text-decoration: none;
+    }
+
+    .contact-box a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: #111;
+      color: #eee;
+      text-align: center;
+      padding: 40px 10px;
+      margin-top: 60px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div style="font-weight:700; font-size:18px;">Bella Dougherty</div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="Aboutme.html">About</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <main>
+    <h1>Contact Me</h1>
+    <p>
+      I'd love to connect! Whether you're reaching out about GIS projects, research, job opportunities,
+      or collaborations, feel free to use the contact details below.
+    </p>
+
+    <div class="contact-box">
+      <p><strong>Email:</strong> <a href="mailto:belladougherty222@gmail.com">belladougherty222@gmail.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:13194314139">319-431-4139</a></p>
+      <p><strong>Location:</strong> Iowa City, Iowa</p>
+    </div>
+
+    <p>If you prefer, you can also reach out via LinkedIn or GitHub.</p>
+    <div class="contact-box">
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com" target="_blank">Your Profile</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com" target="_blank">Your GitHub</a></p>
+    </div>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Bella Dougherty
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
