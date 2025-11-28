@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bella Dougherty | GIS Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Fallback styling if no CSS file yet -->
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fafafa;
+      color: #222;
+    }
+
+    /* NAVBAR */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 40px;
+      background: white;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin-left: 20px;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #0077b6;
+    }
+
+    /* HERO */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 12%;
+      gap: 40px;
+    }
+
+    .hero-text {
+      max-width: 550px;
+    }
+
+    .hero-text h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .hero-text p {
+      font-size: 17px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 22px;
+      font-size: 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      background: #0077b6;
+      color: white;
+    }
+
+    .btn:hover {
+      background: #005f8c;
+    }
+
+    /* PHOTO */
+    .hero-img {
+      width: 350px;
+      height: 420px;
+      border-radius: 14px;
+      background: #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #555;
+      font-size: 18px;
+      border: 2px solid #ccc;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 70px 12%;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: #777;
+      margin-bottom: 25px;
+      max-width: 600px;
+    }
+
+    /* PROJECT GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #e5e5e5;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      border-color: #bbb;
+      transform: translateY(-3px);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 15px;
+    }
+
+    /* CONTACT */
+    footer {
+      background: #111;
+      color: white;
+      padding: 35px;
+      text-align: center;
+      margin-top: 50px;
+      font-size: 14px;
+    }
+
+    /* Small Screens */
+    @media (max-width: 900px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-img {
+        width: 65%;
+        height: 350px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div style="font-weight: 700; font-size: 18px;">Bella Dougherty</div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="resume.html">Resume</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Hi, I'm Bella — GIS Analyst & Researcher</h1>
+      <p>
+        I'm a Geography (GIS Track) student at the University of Iowa specializing in
+        LiDAR analysis, spatial databases, hydrological modeling, and environmental risk assessment.
+        My work focuses on turning complex spatial data into meaningful insights.
+      </p>
+      <a href="projects.html" class="btn">View My Projects</a>
+    </div>
+
+    <div class="hero-img">
+      Your Photo Here
+    </div>
+  </section>
+
+  <!-- ABOUT PREVIEW -->
+  <section>
+    <h2>About Me</h2>
+    <p class="subtitle">
+      I bridge GIS, environmental science, and public policy. From flood modeling in Cedar Rapids to
+      environmental health analysis, I enjoy exploring real-world problems through spatial data.
+    </p>
+    <a href="about.html" class="btn" style="background:#333;">Learn More</a>
+  </section>
+
+  <!-- PROJECT PREVIEW -->
+  <section>
+    <h2>Recent Projects</h2>
+    <p class="subtitle">Here are a few selected GIS projects from my course + research work.</p>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Cedar Rapids Flood Analysis</h3>
+        <p>LiDAR, DEM/DSM creation, hydrology tools, and flood extent modeling.</p>
+        <a href="project-flood.html" class="btn" style="margin-top:15px;">View</a>
+      </div>
+
+      <div class="card">
+        <h3>Agricultural Runoff & Childhood Cancer</h3>
+        <p>Exploring environmental health risks using GIS + spatial statistics.</p>
+        <a href="project-runoff.html" class="btn" style="margin-top:15px;">View</a>
+      </div>
+
+      <div class="card">
+        <h3>Cedar Rapids GIS Database (PostGIS)</h3>
+        <p>Built a spatial database with block groups, trails, parks & accessibility metrics.</p>
+        <a href="project-database.html" class="btn" style="margin-top:15px;">View</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <footer id="contact">
+    © <span id="year"></span> Bella Dougherty · Email: your.email@uiowa.edu
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
