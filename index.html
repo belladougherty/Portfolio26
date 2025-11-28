@@ -1,3 +1,6 @@
+Here’s your cleaned-up and slightly polished `index.html` (fixed grammar, made email/phone clickable, removed duplicate closing tags, kept your structure the same):
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -149,6 +152,15 @@
       font-size: 14px;
     }
 
+    footer a {
+      color: #f3f4f6;
+      text-decoration: underline;
+    }
+
+    footer a:hover {
+      color: #e0f2fe;
+    }
+
     /* Small Screens */
     @media (max-width: 900px) {
       .hero {
@@ -180,9 +192,9 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-text">
-      <h1>Hi, I'm Bella Dougherty! </h1>
+      <h1>Hi, I'm Bella Dougherty!</h1>
       <p>
-        I'm a Geography (GIS Track) student at the University of Iowa with course work experience in
+        I'm a Geography (GIS Track) student at the University of Iowa with coursework experience in
         LiDAR analysis, spatial databases, hydrological modeling, and environmental risk assessment.
       </p>
       <a class="btn" href="resume.html">View My Resume</a>
@@ -198,7 +210,7 @@
     <h2>About Me</h2>
     <p class="subtitle">
       I have taken classes in GIS, environmental science, and public policy. From flood modeling in Cedar Rapids to
-      environmental health analysis. I enjoy exploring real-world problems through spatial data.
+      environmental health analysis, I enjoy exploring real-world problems through spatial data.
     </p>
     <a href="about.html" class="btn" style="background:#333;">Learn More</a>
   </section>
@@ -206,7 +218,7 @@
   <!-- PROJECT PREVIEW -->
   <section>
     <h2>Recent Projects</h2>
-    <p class="subtitle">Here are a few selected GIS projects from my course + research work.</p>
+    <p class="subtitle">Here are a few selected GIS projects from my coursework and research.</p>
 
     <div class="grid">
 
@@ -218,13 +230,13 @@
 
       <div class="card">
         <h3>Agricultural Runoff & Childhood Cancer</h3>
-        <p>Exploring environmental health risks using GIS + spatial statistics.</p>
+        <p>Exploring environmental health risks using GIS and spatial statistics.</p>
         <a href="project-runoff.html" class="btn" style="margin-top:15px;">View</a>
       </div>
 
       <div class="card">
         <h3>Cedar Rapids GIS Database (PostGIS)</h3>
-        <p>Built a spatial database with block groups, trails, parks & accessibility metrics.</p>
+        <p>Built a spatial database with block groups, trails, parks, and accessibility metrics.</p>
         <a href="project-database.html" class="btn" style="margin-top:15px;">View</a>
       </div>
 
@@ -233,7 +245,9 @@
 
   <!-- CONTACT -->
   <footer id="contact">
-    © <span id="year"></span> Bella Dougherty · Email: belladougherty222@gmail.com or Call me at 319.431.4139
+    © <span id="year"></span> Bella Dougherty · 
+    Email: <a href="mailto:belladougherty222@gmail.com">belladougherty222@gmail.com</a> · 
+    Call: <a href="tel:13194314139">319.431.4139</a>
   </footer>
 
   <script>
@@ -242,8 +256,4 @@
 
 </body>
 </html>
-
-
-</body>
-</html>
-
+```
