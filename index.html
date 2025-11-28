@@ -4,9 +4,7 @@
   <meta charset="UTF-8" />
   <title>Bella Dougherty | GIS Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="styles.css" />
 
-  <!-- Fallback styling if no CSS file yet -->
   <style>
     body {
       margin: 0;
@@ -34,6 +32,7 @@
       margin-left: 20px;
       font-size: 15px;
       font-weight: 500;
+      cursor: pointer;
     }
 
     nav a:hover {
@@ -73,6 +72,8 @@
       text-decoration: none;
       background: #0077b6;
       color: white;
+      cursor: pointer;
+      border: none;
     }
 
     .btn:hover {
@@ -149,6 +150,58 @@
       font-size: 14px;
     }
 
+    /* RESUME MODAL */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      display: none; /* hidden by default */
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+    }
+
+    .modal {
+      background: #fff;
+      width: 90%;
+      max-width: 900px;
+      height: 90%;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-header {
+      padding: 10px 16px;
+      background: #0077b6;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 15px;
+    }
+
+    .modal-header button {
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .modal-body {
+      flex: 1;
+      background: #f0f0f0;
+    }
+
+    .modal-body iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
     /* Small Screens */
     @media (max-width: 900px) {
       .hero {
@@ -172,7 +225,8 @@
       <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
       <a href="about.html">About</a>
-      <a href="resume.html">Resume</a>
+      <!-- Resume "pops up" the PDF -->
+      <a id="resumeLink">Resume</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
@@ -180,17 +234,17 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-text">
-      <h1>Hi, I'm Bella! Student in GIS. </h1>
+      <h1>Hi, I'm Bella — GIS Analyst & Researcher</h1>
       <p>
         I'm a Geography (GIS Track) student at the University of Iowa specializing in
         LiDAR analysis, spatial databases, hydrological modeling, and environmental risk assessment.
-       
+        My work focuses on turning complex spatial data into meaningful insights.
       </p>
-      <a href="projects.html" class="btn">View My Projects</a>
+      <button class="btn" onclick="openResume()">View My Resume</button>
     </div>
 
     <div class="hero-img">
-      My Photo Here
+      Your Photo Here
     </div>
   </section>
 
@@ -198,7 +252,7 @@
   <section>
     <h2>About Me</h2>
     <p class="subtitle">
-      I have taken numerous GIS classes. This portfolio will showcase work from flood modeling in Cedar Rapids to
+      I bridge GIS, environmental science, and public policy. From flood modeling in Cedar Rapids to
       environmental health analysis, I enjoy exploring real-world problems through spatial data.
     </p>
     <a href="about.html" class="btn" style="background:#333;">Learn More</a>
@@ -207,7 +261,7 @@
   <!-- PROJECT PREVIEW -->
   <section>
     <h2>Recent Projects</h2>
-    <p class="subtitle">Here are a few selected GIS projects from my course work.</p>
+    <p class="subtitle">Here are a few selected GIS projects from my course + research work.</p>
 
     <div class="grid">
 
@@ -232,6 +286,20 @@
     </div>
   </section>
 
+  <!-- RESUME MODAL -->
+  <div class="modal-overlay" id="resumeModal">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="resumeTitle">
+      <div class="modal-header">
+        <span id="resumeTitle">Resume – Bella Dougherty</span>
+        <button onclick="closeResume()" aria-label="Close resume viewer">✕</button>
+      </div>
+      <div class="modal-body">
+        <!-- Make sure resume.pdf is in the same folder as this index.html -->
+        <iframe src="resume.pdf"></iframe>
+      </div>
+    </div>
+  </div>
+
   <!-- CONTACT -->
   <footer id="contact">
     © <span id="year"></span> Bella Dougherty · Email: your.email@uiowa.edu
@@ -239,7 +307,36 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    const resumeModal = document.getElementById('resumeModal');
+    const resumeLink = document.getElementById('resumeLink');
+
+    function openResume() {
+      resumeModal.style.display = 'flex';
+    }
+
+    function closeResume() {
+      resumeModal.style.display = 'none';
+    }
+
+    // Click "Resume" in nav opens modal
+    resumeLink.addEventListener('click', openResume);
+
+    // Close when clicking outside modal
+    resumeModal.addEventListener('click', function (e) {
+      if (e.target === resumeModal) {
+        closeResume();
+      }
+    });
+
+    // ESC key to close
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        closeResume();
+      }
+    });
   </script>
 
 </body>
 </html>
+
