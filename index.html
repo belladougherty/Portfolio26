@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Bella Dougherty | GIS Portfolio</title>
+  <title>Resume | Bella Dougherty</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <style>
@@ -13,7 +13,7 @@
       color: #222;
     }
 
-    /* NAVBAR */
+    /* NAVBAR (same style as index) */
     nav {
       display: flex;
       justify-content: space-between;
@@ -32,186 +32,137 @@
       margin-left: 20px;
       font-size: 15px;
       font-weight: 500;
-      cursor: pointer;
     }
 
     nav a:hover {
       color: #0077b6;
     }
 
-    /* HERO */
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 80px 12%;
-      gap: 40px;
+    /* PAGE LAYOUT */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 20px 80px;
     }
 
-    .hero-text {
-      max-width: 550px;
-    }
-
-    .hero-text h1 {
-      font-size: 40px;
+    h1 {
+      font-size: 34px;
       margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
     }
 
-    .hero-text p {
-      font-size: 17px;
-      line-height: 1.6;
+    h2 {
+      font-size: 24px;
+      margin-top: 40px;
+      margin-bottom: 12px;
+    }
+
+    h3 {
+      font-size: 16px;
       color: #555;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
+    h4 {
+      font-size: 18px;
+      margin: 4px 0;
+    }
+
+    .org {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 15px;
+      color: #444;
+    }
+
+    /* TIMELINE STYLE */
+    .timeline {
+      border-left: 2px solid #ddd;
+      margin-top: 10px;
+      padding-left: 22px;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 26px;
+      padding-left: 4px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -12px;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #0077b6;
+    }
+
+    .subtle {
+      color: #777;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    /* LISTS */
+    ul {
+      padding-left: 18px;
+      margin-top: 6px;
+      margin-bottom: 0;
+    }
+
+    ul li {
+      font-size: 15px;
+      margin-bottom: 4px;
+      color: #444;
+    }
+
+    /* BUTTON / LINK */
     .btn {
       display: inline-block;
-      margin-top: 25px;
-      padding: 12px 22px;
-      font-size: 16px;
+      margin-top: 18px;
+      padding: 10px 20px;
+      font-size: 15px;
       border-radius: 6px;
       text-decoration: none;
       background: #0077b6;
       color: white;
-      cursor: pointer;
-      border: none;
     }
 
     .btn:hover {
       background: #005f8c;
     }
 
-    /* PHOTO */
-    .hero-img {
-      width: 350px;
-      height: 420px;
-      border-radius: 14px;
-      background: #ddd;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #555;
-      font-size: 18px;
-      border: 2px solid #ccc;
+    .download-section {
+      margin-top: 40px;
+      padding-top: 18px;
+      border-top: 1px solid #ddd;
     }
 
-    /* SECTIONS */
-    section {
-      padding: 70px 12%;
-    }
-
-    h2 {
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
-
-    .subtitle {
-      font-size: 16px;
-      color: #777;
-      margin-bottom: 25px;
-      max-width: 600px;
-    }
-
-    /* PROJECT GRID */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
-    }
-
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      border: 1px solid #e5e5e5;
-      transition: 0.2s;
-    }
-
-    .card:hover {
-      border-color: #bbb;
-      transform: translateY(-3px);
-    }
-
-    .card h3 {
-      margin-top: 0;
-    }
-
-    .card p {
-      color: #555;
-      font-size: 15px;
-    }
-
-    /* CONTACT */
+    /* CONTACT FOOTER */
     footer {
-      background: #111;
-      color: white;
-      padding: 35px;
-      text-align: center;
-      margin-top: 50px;
-      font-size: 14px;
-    }
-
-    /* RESUME MODAL */
-    .modal-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.6);
-      display: none; /* hidden by default */
-      justify-content: center;
-      align-items: center;
-      z-index: 100;
-    }
-
-    .modal {
-      background: #fff;
-      width: 90%;
       max-width: 900px;
-      height: 90%;
-      border-radius: 8px;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      margin: 0 auto;
+      padding: 0 20px 60px;
+      font-size: 14px;
+      color: #777;
     }
 
-    .modal-header {
-      padding: 10px 16px;
-      background: #0077b6;
-      color: #fff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 15px;
+    .contact-link {
+      color: #0077b6;
+      text-decoration: none;
     }
 
-    .modal-header button {
-      background: transparent;
-      border: none;
-      color: #fff;
-      font-size: 18px;
-      cursor: pointer;
-    }
-
-    .modal-body {
-      flex: 1;
-      background: #f0f0f0;
-    }
-
-    .modal-body iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    /* Small Screens */
-    @media (max-width: 900px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
-      }
-      .hero-img {
-        width: 65%;
-        height: 350px;
-      }
+    .contact-link:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -223,119 +174,133 @@
     <div style="font-weight: 700; font-size: 18px;">Bella Dougherty</div>
     <div>
       <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
       <a href="about.html">About</a>
-      <!-- Resume "pops up" the PDF -->
-      <a id="resumeLink">Resume</a>
-      <a href="#contact">Contact</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="index.html#contact">Contact</a>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Hi, I'm Bella — GIS Analyst & Researcher</h1>
-      <p>
-        I'm a Geography (GIS Track) student at the University of Iowa specializing in
-        LiDAR analysis, spatial databases, hydrological modeling, and environmental risk assessment.
-        My work focuses on turning complex spatial data into meaningful insights.
-      </p>
-      <button class="btn" onclick="openResume()">View My Resume</button>
-    </div>
-
-    <div class="hero-img">
-      Your Photo Here
-    </div>
-  </section>
-
-  <!-- ABOUT PREVIEW -->
-  <section>
-    <h2>About Me</h2>
-    <p class="subtitle">
-      I bridge GIS, environmental science, and public policy. From flood modeling in Cedar Rapids to
-      environmental health analysis, I enjoy exploring real-world problems through spatial data.
+  <main>
+    <h1>RESUME</h1>
+    <p class="subtle">
+      A snapshot of my Professional and Educational experience.  
+      For a full version, download the PDF at the bottom of this page.
     </p>
-    <a href="about.html" class="btn" style="background:#333;">Learn More</a>
-  </section>
 
-  <!-- PROJECT PREVIEW -->
-  <section>
-    <h2>Recent Projects</h2>
-    <p class="subtitle">Here are a few selected GIS projects from my course + research work.</p>
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <h2>Professional Experience</h2>
+    <div class="timeline">
 
-    <div class="grid">
-
-      <div class="card">
-        <h3>Cedar Rapids Flood Analysis</h3>
-        <p>LiDAR, DEM/DSM creation, hydrology tools, and flood extent modeling.</p>
-        <a href="project-flood.html" class="btn" style="margin-top:15px;">View</a>
+      <!-- Example experience 1 – edit dates/details to be accurate -->
+      <div class="timeline-item">
+        <h3>May 2024 – Aug 2024</h3>
+        <div class="org">Cedar Rapids Water Department</div>
+        <h4>GIS / Water Resources Intern</h4>
+        <p>
+          Supported water infrastructure and planning projects using GIS tools and spatial data.
+        </p>
+        <ul>
+          <li>Processed and cleaned spatial datasets for water mains, hydrants, and service areas.</li>
+          <li>Created maps and basic analyses to support maintenance planning and asset management.</li>
+          <li>Collaborated with staff on data collection workflows and documentation.</li>
+        </ul>
       </div>
 
-      <div class="card">
-        <h3>Agricultural Runoff & Childhood Cancer</h3>
-        <p>Exploring environmental health risks using GIS + spatial statistics.</p>
-        <a href="project-runoff.html" class="btn" style="margin-top:15px;">View</a>
+      <!-- Example experience 2 – class / research style experience -->
+      <div class="timeline-item">
+        <h3>2023 – 2025</h3>
+        <div class="org">University of Iowa · Course & Project Work</div>
+        <h4>GIS & Spatial Analysis Projects</h4>
+        <p>
+          Completed multiple applied GIS projects focusing on environmental risk, health, and urban access.
+        </p>
+        <ul>
+          <li>Modeled flood exposure in downtown Cedar Rapids using LiDAR-derived DEMs and hydrology tools.</li>
+          <li>Analyzed agricultural runoff and potential links to childhood cancer risk across Iowa counties.</li>
+          <li>Built a PostGIS database integrating trails, parks, and demographic data to assess access to green space.</li>
+        </ul>
       </div>
 
-      <div class="card">
-        <h3>Cedar Rapids GIS Database (PostGIS)</h3>
-        <p>Built a spatial database with block groups, trails, parks & accessibility metrics.</p>
-        <a href="project-database.html" class="btn" style="margin-top:15px;">View</a>
+      <!-- You can add more positions here later -->
+      <!--
+      <div class="timeline-item">
+        <h3>Month Year – Month Year</h3>
+        <div class="org">Organization Name</div>
+        <h4>Position Title</h4>
+        <p>Short role description.</p>
+        <ul>
+          <li>Bullet point describing what you did.</li>
+          <li>Another bullet.</li>
+        </ul>
       </div>
+      -->
 
     </div>
-  </section>
 
-  <!-- RESUME MODAL -->
-  <div class="modal-overlay" id="resumeModal">
-    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="resumeTitle">
-      <div class="modal-header">
-        <span id="resumeTitle">Resume – Bella Dougherty</span>
-        <button onclick="closeResume()" aria-label="Close resume viewer">✕</button>
-      </div>
-      <div class="modal-body">
-        <!-- Make sure resume.pdf is in the same folder as this index.html -->
-        <iframe src="Bella Dougherty (1).pdf"></iframe>
+    <!-- EDUCATION -->
+    <h2>Education</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>Expected May 2026</h3>
+        <div class="org">University of Iowa · Iowa City, IA</div>
+        <h4>B.A. in Geography (GIS Track)</h4>
+        <p>
+          Coursework includes GIS, LiDAR, spatial databases, environmental policy, statistics, and political science.
+        </p>
+        <ul>
+          <li>Advanced GIS, LiDAR and Terrain Analysis, Intro to Geographic Databases (PostGIS/pgAdmin).</li>
+          <li>Health & Environment GIS, Hydrologic Modeling, Spatial Statistics.</li>
+          <li>Spanish, Political Science (public opinion, elections), and environmental policy courses.</li>
+        </ul>
       </div>
     </div>
-  </div>
 
-  <!-- CONTACT -->
-  <footer id="contact">
-    © <span id="year"></span> Bella Dougherty · Email: your.email@uiowa.edu
+    <!-- SKILLS -->
+    <h2>Technical Skills</h2>
+    <p>
+      <strong>GIS & Remote Sensing:</strong> QGIS, ArcGIS Pro, LiDAR/DEM/DSM processing, hydrology tools (flow accumulation, watershed analysis)  
+      <br>
+      <strong>Databases & Programming:</strong> PostGIS, pgAdmin, SQL  
+      <br>
+      <strong>Statistics & Analysis:</strong> Stata, regression and spatial analysis concepts  
+      <br>
+      <strong>Other:</strong> Cartography, report writing, research design, public speaking
+    </p>
+
+    <!-- AWARDS / INTERESTS (optional, edit as you like) -->
+    <h2>Interests</h2>
+    <p>
+      Flood risk and climate resilience, environmental health, conservation GIS, spatial databases,
+      and using maps to communicate complex social and environmental issues.
+    </p>
+
+    <!-- DOWNLOAD RESUME PDF -->
+    <div class="download-section">
+      <h2>Download Full Resume (PDF)</h2>
+      <p class="subtle">
+        For complete details, including additional roles, coursework, and projects, view my full resume as a PDF.
+      </p>
+
+      <!-- Uses your exact current filename -->
+      <a
+        class="btn"
+        href="Bella%20Dougherty%20(1).pdf"
+        target="_blank"
+        rel="noopener"
+      >
+        Download Resume – PDF
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    Questions or opportunities? Email me at
+    <a class="contact-link" href="mailto:your.email@uiowa.edu">your.email@uiowa.edu</a>.
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    const resumeModal = document.getElementById('resumeModal');
-    const resumeLink = document.getElementById('resumeLink');
-
-    function openResume() {
-      resumeModal.style.display = 'flex';
-    }
-
-    function closeResume() {
-      resumeModal.style.display = 'none';
-    }
-
-    // Click "Resume" in nav opens modal
-    resumeLink.addEventListener('click', openResume);
-
-    // Close when clicking outside modal
-    resumeModal.addEventListener('click', function (e) {
-      if (e.target === resumeModal) {
-        closeResume();
-      }
-    });
-
-    // ESC key to close
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') {
-        closeResume();
-      }
-    });
-  </script>
+</body>
+</html>
 
 </body>
 </html>
