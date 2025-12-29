@@ -3,100 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DRONE Certification and Hours</title>
+    <title>Bella Dougherty's Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
         }
         header {
             background-color: #005f7f;
             color: white;
-            padding: 20px;
             text-align: center;
+            padding: 50px 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+        nav {
+            text-align: center;
+            background-color: #333;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+        nav a:hover {
+            color: #005f7f;
         }
         section {
-            padding: 20px;
-            margin: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 50px 20px;
+            margin: 0 auto;
+            max-width: 1000px;
         }
         h2 {
             color: #005f7f;
+            font-size: 2em;
         }
-        .certification, .hours, .photos {
-            margin-bottom: 20px;
-        }
-        .photos img {
-            width: 100%;
-            max-width: 500px;
-            border-radius: 8px;
-        }
-        .btn {
+        .button {
             background-color: #005f7f;
             color: white;
             padding: 10px 20px;
-            text-decoration: none;
             border-radius: 5px;
+            text-decoration: none;
             display: inline-block;
-            margin-top: 10px;
+            margin-top: 20px;
         }
-        .btn:hover {
+        .button:hover {
             background-color: #004c66;
+        }
+        .projects, .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+        .project-card, .contact-info div {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 48%;
+            border-radius: 8px;
+        }
+        .project-card h3, .contact-info h3 {
+            margin-top: 0;
+        }
+        .photo-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .photo-container img {
+            width: 200px;
+            border-radius: 50%;
+            border: 5px solid #005f7f;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px;
+            border-radius: 8px;
         }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>Drone Certification, Hours, and Photos</h1>
+        <h1>Bella Dougherty</h1>
+        <p>Geography (GIS Track) Student | LiDAR, Spatial Analysis, Environmental Risk</p>
     </header>
 
-    <section class="certification">
-        <h2>Drone Certification</h2>
-        <p>Enter your drone certification details below:</p>
-        <form action="#" method="post">
-            <label for="certificationNumber">Certification Number:</label><br>
-            <input type="text" id="certificationNumber" name="certificationNumber" placeholder="Enter your certification number" required><br><br>
-            
-            <label for="certificationDate">Certification Date:</label><br>
-            <input type="date" id="certificationDate" name="certificationDate" required><br><br>
-            
-            <input type="submit" value="Submit" class="btn">
-        </form>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#resume">Resume</a>
+        <a href="#drone">Drone</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h2>Hi, I'm Bella Dougherty!</h2>
+        <p>I'm a Geography (GIS Track) student at the University of Iowa with coursework experience in LiDAR analysis, spatial databases, hydrological modeling, and environmental risk assessment.</p>
+        <div class="photo-container">
+            <img src="https://via.placeholder.com/200" alt="Bella's photo">
+        </div>
+        <a href="#resume" class="button">View My Resume</a>
     </section>
 
-    <section class="hours">
-        <h2>Drone Hours</h2>
-        <p>Track the number of hours you've flown with your drone:</p>
-        <form action="#" method="post">
-            <label for="flightHours">Total Flight Hours:</label><br>
-            <input type="number" id="flightHours" name="flightHours" min="0" step="0.1" placeholder="Enter total flight hours" required><br><br>
-
-            <label for="lastFlightDate">Date of Last Flight:</label><br>
-            <input type="date" id="lastFlightDate" name="lastFlightDate" required><br><br>
-            
-            <input type="submit" value="Submit" class="btn">
-        </form>
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I have taken classes in GIS, environmental science, and public policy. From flood modeling in Cedar Rapids to environmental health analysis, I enjoy exploring real-world problems through spatial data.</p>
+        <a href="#projects" class="button">Learn More</a>
     </section>
 
-    <section class="photos">
-        <h2>Photos Taken from Drone</h2>
-        <p>Upload and view your drone photos here:</p>
-        <form action="#" method="post" enctype="multipart/form-data">
-            <label for="photoUpload">Upload a Photo:</label><br>
-            <input type="file" id="photoUpload" name="photoUpload" accept="image/*" required><br><br>
-            
-            <input type="submit" value="Upload Photo" class="btn">
-        </form>
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Recent Projects</h2>
+        <div class="projects">
+            <div class="project-card">
+                <h3>Shake Shack’s Network Analysis in NYC</h3>
+                <p>Performed network analysis to assess which Shake Shack locations in NYC should close based on service area, demographics, and median income.</p>
+                <a href="#" class="button">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Sea Level Rise Impact in Boston</h3>
+                <p>Mapped the potential impact of sea level rise on Boston's land and infrastructure with projections for 1m, 2m, and 3m rises.</p>
+                <a href="#" class="button">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Demographic Visualizations for NYC</h3>
+                <p>Visualized and analyzed various demographic variables for New York City, including income, educational attainment, and age distribution.</p>
+                <a href="#" class="button">View Project</a>
+            </div>
+        </div>
+    </section>
 
-        <div class="photo-gallery">
-            <h3>Uploaded Photos:</h3>
-            <div id="gallery">
-                <!-- Example image (this can be replaced with actual uploaded images) -->
+    <!-- Drone Section -->
+    <section id="drone">
+        <h2>Drone Certification and Hours</h2>
+        <p>Track and manage your drone certification, flight hours, and photos.</p>
+
+        <!-- Drone Certification -->
+        <div class="project-card">
+            <h3>Drone Certification</h3>
+            <form action="#" method="post">
+                <label for="certificationNumber">Certification Number:</label><br>
+                <input type="text" id="certificationNumber" name="certificationNumber" placeholder="Enter your certification number" required><br><br>
+                
+                <label for="certificationDate">Certification Date:</label><br>
+                <input type="date" id="certificationDate" name="certificationDate" required><br><br>
+                
+                <input type="submit" value="Submit" class="button">
+            </form>
+        </div>
+
+        <!-- Drone Hours -->
+        <div class="project-card">
+            <h3>Drone Hours</h3>
+            <form action="#" method="post">
+                <label for="flightHours">Total Flight Hours:</label><br>
+                <input type="number" id="flightHours" name="flightHours" min="0" step="0.1" placeholder="Enter total flight hours" required><br><br>
+
+                <label for="lastFlightDate">Date of Last Flight:</label><br>
+                <input type="date" id="lastFlightDate" name="lastFlightDate" required><br><br>
+                
+                <input type="submit" value="Submit" class="button">
+            </form>
+        </div>
+
+        <!-- Drone Photos -->
+        <div class="project-card">
+            <h3>Photos Taken from Drone</h3>
+            <form action="#" method="post" enctype="multipart/form-data">
+                <label for="photoUpload">Upload a Photo:</label><br>
+                <input type="file" id="photoUpload" name="photoUpload" accept="image/*" required><br><br>
+                
+                <input type="submit" value="Upload Photo" class="button">
+            </form>
+
+            <div class="gallery">
+                <h3>Uploaded Photos:</h3>
                 <img src="https://via.placeholder.com/500x300" alt="Drone Photo 1">
                 <img src="https://via.placeholder.com/500x300" alt="Drone Photo 2">
                 <img src="https://via.placeholder.com/500x300" alt="Drone Photo 3">
@@ -104,5 +197,23 @@
         </div>
     </section>
 
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-info">
+            <div>
+                <h3>Email:</h3>
+                <p>belladougherty222@gmail.com</p>
+            </div>
+            <div>
+                <h3>Phone:</h3>
+                <p>319.431.4139</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Bella Dougherty · <a href="mailto:belladougherty222@gmail.com">Email Me</a> · Call: 319.431.4139</p>
+    </footer>
 </body>
 </html>
