@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mapping Noise Pollution in U.S. Cities | Bella Dougherty</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fafafa;
+      color: #222;
+    }
+
+    /* NAVBAR */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 40px;
+      background: white;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin-left: 20px;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #0077b6;
+    }
+
+    /* HEADER */
+    .header {
+      text-align: center;
+      padding: 60px 20px;
+      background: #0077b6;
+      color: white;
+    }
+
+    .header h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      font-size: 18px;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* PROJECT CONTENT */
+    section {
+      padding: 60px 12%;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .content {
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .content p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #e5e5e5;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      border-color: #bbb;
+      transform: translateY(-3px);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      padding: 35px;
+      text-align: center;
+      margin-top: 50px;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #e8e8e8;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div style="font-weight: 700; font-size: 18px;">Bella Dougherty</div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="Projects.html">Projects</a>
+      <a href="Aboutme.html">About</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="header">
+    <h1>Mapping Noise Pollution in U.S. Cities</h1>
+    <p>Noise pollution mapping and its health impacts in U.S. cities, with a focus on high-noise areas like industrial zones and highways.</p>
+  </section>
+
+  <!-- PROJECT CONTENT -->
+  <section>
+    <h2>Project Overview</h2>
+    <div class="content">
+      <p>
+        In this project, I focused on mapping noise pollution levels across U.S. cities, particularly in areas with high levels of industrial activity or heavy traffic such as highways and industrial zones.
+      </p>
+      <p>
+        The goal was to analyze the relationship between noise pollution and its impact on public health, particularly in terms of respiratory issues, sleep disturbances, and other health concerns linked to noise exposure. The analysis used noise data, health data, and GIS tools to identify noise pollution hotspots and assess their health impacts.
+      </p>
+      <p>
+        Tools used in the analysis include GIS platforms like ArcGIS and QGIS, with a focus on overlaying noise data with health statistics to visualize the potential health risks associated with noise exposure.
+      </p>
+    </div>
+  </section>
+
+  <!-- ANALYSIS RESULTS -->
+  <section>
+    <h2>Analysis Results</h2>
+    <div class="content">
+      <p>
+        Below are the key findings of the noise pollution analysis, including maps and visualizations that demonstrate noise pollution patterns and their potential health impacts in urban areas.
+      </p>
+
+      <div class="grid">
+
+        <!-- Noise Pollution Map -->
+        <div class="card">
+          <h3>Noise Pollution Map</h3>
+          <p>This map displays noise pollution levels across various U.S. cities, focusing on high-noise areas such as highways and industrial zones.</p>
+          <img src="path/to/your/noise_pollution_map.jpg" alt="Noise Pollution Map">
+        </div>
+
+        <!-- Health Impacts Map -->
+        <div class="card">
+          <h3>Health Impacts</h3>
+          <p>This map highlights areas with high noise pollution levels and overlays health data, such as respiratory issues and sleep disturbances, to identify vulnerable populations.</p>
+          <img src="path/to/your/health_impacts_map.jpg" alt="Health Impacts Map">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONCLUSIONS & RECOMMENDATIONS -->
+  <section>
+    <h2>Conclusions & Recommendations</h2>
+    <div class="content">
+      <p>
+        Based on the analysis, the following conclusions and recommendations were made:
+      </p>
+      <ul>
+        <li>Areas with high levels of noise pollution, especially in industrial and heavily trafficked zones, show a correlation with higher rates of respiratory issues and sleep disturbances.</li>
+        <li>It is recommended to implement noise mitigation measures, such as sound barriers along highways and stricter noise regulations in industrial zones.</li>
+        <li>Local authorities should consider using noise reduction strategies as part of urban planning to protect public health, especially in high-risk areas.</li>
+      </ul>
+      <p>
+        These findings aim to guide city planners and policymakers in addressing the health impacts of noise pollution and improving the overall quality of life in urban environments.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © <span id="year"></span> Bella Dougherty · 
+    Email: <a href="mailto:belladougherty222@gmail.com">belladougherty222@gmail.com</a> · 
+    Call: <a href="tel:13194314139">319.431.4139</a>
+  </footer>
+
+  <script>
+    document.getElementById("year").textCon
