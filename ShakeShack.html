@@ -38,7 +38,7 @@
       color: #0077b6;
     }
 
-    /* PAGE HEADER */
+    /* HEADER */
     .header {
       text-align: center;
       padding: 60px 20px;
@@ -56,22 +56,6 @@
       max-width: 800px;
       margin: 0 auto;
       line-height: 1.6;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 12px 22px;
-      font-size: 16px;
-      border-radius: 6px;
-      text-decoration: none;
-      background: #0077b6;
-      color: white;
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      background: #005f8c;
     }
 
     /* PROJECT CONTENT */
@@ -100,6 +84,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 25px;
+      margin-top: 30px;
     }
 
     .card {
@@ -115,9 +100,9 @@
       transform: translateY(-3px);
     }
 
-    .card p {
-      color: #555;
-      font-size: 15px;
+    .card img {
+      width: 100%;
+      border-radius: 10px;
     }
 
     footer {
@@ -153,9 +138,7 @@
   <!-- PAGE HEADER -->
   <section class="header">
     <h1>Shake Shack’s Network Analysis in NYC</h1>
-    <p>
-      Network analysis of Shake Shack locations in New York City, assessing which stores should close based on service areas, demographics, and median income.
-    </p>
+    <p>Network analysis of Shake Shack locations in New York City, assessing which stores should close based on service areas, demographics, and median income.</p>
   </section>
 
   <!-- PROJECT CONTENT -->
@@ -180,29 +163,33 @@
       </p>
 
       <div class="grid">
-        <!-- Placeholder for analysis maps -->
+
+        <!-- Map of Current Locations -->
         <div class="card">
           <h3>Map of Current Locations</h3>
           <p>Here, we display a map showing all current Shake Shack locations in NYC.</p>
-          <a href="#" class="btn">View Map</a>
+          <img src="path/to/your/map1.jpg" alt="Map of Current Locations">
         </div>
 
+        <!-- Service Area Analysis -->
         <div class="card">
           <h3>Service Area Analysis</h3>
           <p>This map highlights the service areas for each location based on drive time and pedestrian access.</p>
-          <a href="#" class="btn">View Map</a>
+          <img src="path/to/your/map2.jpg" alt="Service Area Analysis">
         </div>
 
+        <!-- Demographic Distribution -->
         <div class="card">
           <h3>Demographic Distribution</h3>
           <p>We analyzed the demographics (income, age, etc.) surrounding each location to assess their impact on customer base.</p>
-          <a href="#" class="btn">View Map</a>
+          <img src="path/to/your/map3.jpg" alt="Demographic Distribution">
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- CONCLUSIONS -->
+  <!-- CONCLUSIONS & RECOMMENDATIONS -->
   <section>
     <h2>Conclusions & Recommendations</h2>
     <div class="content">
@@ -231,3 +218,4 @@
 
 </body>
 </html>
+
