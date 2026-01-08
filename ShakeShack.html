@@ -101,9 +101,10 @@
       transform: translateY(-3px);
     }
 
-    .card img {
+    .card img, .card iframe {
       width: 100%;
       border-radius: 10px;
+      margin-top: 10px;
     }
 
     footer {
@@ -154,12 +155,13 @@
       </p>
     </div>
   </section>
+
   <!-- ANALYSIS RESULTS -->
   <section>
     <h2>Analysis Results</h2>
     <div class="content">
       <p>
-        Below are some of the key findings of the analysis, including maps and visualizations that illustrate the decision-making process and potential impact on Shake Shack's New York City network.
+        Below are some of the key findings of the analysis, including maps, visualizations, and PDFs that illustrate the decision-making process and potential impact on Shake Shack's New York City network.
       </p>
 
       <div class="grid">
@@ -186,9 +188,40 @@
         </div>
 
       </div>
+
+      <!-- PDF Visualizations -->
+      <h2>PDF Analysis Visualizations</h2>
+      <p>Click the links below or view the embedded PDFs for more detailed analysis.</p>
+
+      <div class="grid">
+
+        <!-- Shake Shack Walking Service Areas -->
+        <div class="card">
+          <h3>Walking Service Areas</h3>
+          <p>PDF showing Shake Shack walking service areas in New York City.</p>
+          <a href="ShakeShackWalkingServiceAreasinNewYorkCity.pdf" target="_blank">View PDF</a>
+          <iframe src="ShakeShackWalkingServiceAreasinNewYorkCity.pdf" width="100%" height="300px"></iframe>
+        </div>
+
+        <!-- Shake Shack Locations -->
+        <div class="card">
+          <h3>Shake Shack Locations</h3>
+          <p>PDF showing all Shake Shack locations in NYC.</p>
+          <a href="ShakeShackLocationsinNYC.pdf" target="_blank">View PDF</a>
+          <iframe src="ShakeShackLocationsinNYC.pdf" width="100%" height="300px"></iframe>
+        </div>
+
+        <!-- Overlap of Service Areas -->
+        <div class="card">
+          <h3>Overlap of Service Areas</h3>
+          <p>PDF showing the overlap of walking service areas among Shake Shack locations in NYC.</p>
+          <a href="OverlapofWalkingServiceAreasAmongShakeShackLocationsinNYC.pdf" target="_blank">View PDF</a>
+          <iframe src="OverlapofWalkingServiceAreasAmongShakeShackLocationsinNYC.pdf" width="100%" height="300px"></iframe>
+        </div>
+
+      </div>
     </div>
   </section>
-
 
   <!-- FOOTER -->
   <footer>
@@ -203,4 +236,3 @@
 
 </body>
 </html>
-
