@@ -1,208 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bella Dougherty's Portfolio</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-        header {
-            background-color: #005f7f;
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 3em;
-        }
-        nav {
-            text-align: center;
-            background-color: #333;
-            padding: 10px 0;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-size: 1.1em;
-        }
-        nav a:hover {
-            color: #005f7f;
-        }
-        section {
-            padding: 50px 20px;
-            margin: 0 auto;
-            max-width: 1000px;
-        }
-        h2 {
-            color: #005f7f;
-            font-size: 2em;
-        }
-        .button {
-            background-color: #005f7f;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 20px;
-        }
-        .button:hover {
-            background-color: #004c66;
-        }
-        .projects, .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: space-between;
-        }
-        .project-card, .contact-info div {
-            background-color: white;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            width: 48%;
-            border-radius: 8px;
-        }
-        .project-card h3, .contact-info h3 {
-            margin-top: 0;
-        }
-        .photo-container {
-            text-align: center;
-            margin-top: 30px;
-        }
-        .photo-container img {
-            width: 200px;
-            border-radius: 50%;
-            border: 5px solid #005f7f;
-        }
-        .gallery img {
-            width: 100%;
-            max-width: 300px;
-            margin: 10px;
-            border-radius: 8px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Drone Experience | Bella Dougherty</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fafafa;
+      color: #222;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .drone-img {
+      width: 300px;
+      height: 200px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 0 auto 20px;
+      border: 2px solid #ccc;
+    }
+
+    .drone-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .cert-number {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .intro {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    .image-section {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 60px;
+    }
+
+    .image-card {
+      width: 250px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+      background: white;
+    }
+
+    .image-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .image-caption {
+      padding: 10px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <h1>Bella Dougherty</h1>
-        <p>Geography (GIS Track) Student | LiDAR, Spatial Analysis, Environmental Risk</p>
-    </header>
+  <h1>My Drone Experience</h1>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="Projects.html">Projects</a>
-      <a href="DRONE.html">Drone</a>
-      <a href="Aboutme.html">About</a>
-      <a href="resume.html">Resume</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <!-- Drone Hero Image -->
+  <div class="drone-img">
+    <img src="drone_photo.jpg" alt="My Drone">
+  </div>
 
-    <!-- Home Section -->
-    <section id="home">
-        <h2>Hi, I'm Bella Dougherty!</h2>
-        <p>I'm a Geography (GIS Track) student at the University of Iowa with coursework experience in LiDAR analysis, spatial databases, hydrological modeling, and environmental risk assessment.</p>
-        <div class="photo-container">
-            <img src="https://via.placeholder.com/200" alt="Bella's photo">
-        </div>
-        <a href="#resume" class="button">View My Resume</a>
-    </section>
+  <!-- Certification Number -->
+  <div class="cert-number">
+    Drone Certification Number: 12345ABC
+  </div>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I have taken classes in GIS, environmental science, and public policy. From flood modeling in Cedar Rapids to environmental health analysis, I enjoy exploring real-world problems through spatial data.</p>
-        <a href="#projects" class="button">Learn More</a>
-    </section>
+  <!-- Intro -->
+  <p class="intro">
+    I really enjoy flying my drone, capturing aerial perspectives, and exploring landscapes from above.  
+    Below are some of my favorite shots and projects that showcase my work with UAVs.
+  </p>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Recent Projects</h2>
-        <div class="projects">
-            <div class="project-card">
-                <h3>Shake Shack’s Network Analysis in NYC</h3>
-                <p>Performed network analysis to assess which Shake Shack locations in NYC should close based on service area, demographics, and median income.</p>
-                <a href="#" class="button">View Project</a>
-            </div>
-            <div class="project-card">
-                <h3>Sea Level Rise Impact in Boston</h3>
-                <p>Mapped the potential impact of sea level rise on Boston's land and infrastructure with projections for 1m, 2m, and 3m rises.</p>
-                <a href="#" class="button">View Project</a>
-            </div>
-            <div class="project-card">
-                <h3>Demographic Visualizations for NYC</h3>
-                <p>Visualized and analyzed various demographic variables for New York City, including income, educational attainment, and age distribution.</p>
-                <a href="#" class="button">View Project</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Drone Section -->
-    <section id="drone">
-        <h2>Drone Certification and Hours</h2>
-        <p>Track and manage your drone certification, flight hours, and photos.</p>
-
-        <!-- Drone Certification -->
-        <div class="project-card">
-            <h3>Drone Certification</h3>
-            <label for="certificationNumber">Certification Number:</label><br>
-            <input type="text" id="certificationNumber" name="certificationNumber" value="XYZ123456" readonly><br><br>
-            
-            <label for="certificationDate">Certification Date:</label><br>
-            <input type="date" id="certificationDate" name="certificationDate" value="2024-05-01" readonly><br><br>
-        </div>
-
-        <!-- Drone Hours -->
-        <div class="project-card">
-            <h3>Drone Hours</h3>
-            <label for="flightHours">Total Flight Hours:</label><br>
-            <input type="number" id="flightHours" name="flightHours" value="150.5" readonly><br><br>
-
-            <label for="lastFlightDate">Date of Last Flight:</label><br>
-            <input type="date" id="lastFlightDate" name="lastFlightDate" value="2025-12-15" readonly><br><br>
-        </div>
-
-        <!-- Drone Photos -->
-        <div class="project-card">
-            <h3>Photos Taken from Drone</h3>
-            <div class="gallery">
-                <img src="https://via.placeholder.com/500x300" alt="Drone Photo 1">
-                <img src="https://via.placeholder.com/500x300" alt="Drone Photo 2">
-                <img src="https://via.placeholder.com/500x300" alt="Drone Photo 3">
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <div class="contact-info">
-            <div>
-                <h3>Email:</h3>
-                <p>belladougherty222@gmail.com</p>
-            </div>
-            <div>
-                <h3>Phone:</h3>
-                <p>319.431.4139</p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2025 Bella Dougherty · <a href="mailto:belladougherty222@gmail.com">Email Me</a> · Call: 319.431.4139</p>
-    </footer>
+  <!-- Three Image Placeholders -->
+  <div class="image-section">
+    <div class="image-card">
+      <img src="image1.jpg" alt="Drone Image 1">
+      <div class="image-caption">Caption for Image 1 describing what is shown</div>
+    </div>
+    <div class="image-card">
+      <img src="image2.jpg" alt="Drone Image 2">
+      <div class="image-caption">Caption for Image 2 describing what is shown</div>
+    </div>
+    <div class="image-card">
+      <img src="image3.jpg" alt="Drone Image 3">
+      <div class="image-caption">Caption for Image 3 describing what is shown</div>
+    </div>
+  </div>
 
 </body>
 </html>
-a Dougherty · <a href="mailto:belladougherty222@gmail.com">Email Me</a> · Call: 319.431.4139</p>
-    </footer>
-</body>
-</html>
+
