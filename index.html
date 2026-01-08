@@ -45,6 +45,7 @@
       justify-content: space-between;
       padding: 80px 12%;
       gap: 40px;
+      flex-wrap: wrap;
     }
 
     .hero-text {
@@ -79,16 +80,21 @@
     }
 
     .hero-img {
-      width: 35px;
-      height: 42px;
-      border-radius: 14px;
-      background: #ddd;
+      width: 200px;       /* Width of rectangle */
+      height: 250px;      /* Height of rectangle */
+      border-radius: 10px; /* Slightly rounded corners */
+      overflow: hidden;
+      border: 2px solid #ccc;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #555;
-      font-size: 18px;
-      border: 2px solid #ccc;
+      flex-shrink: 0;     /* Prevent shrinking on smaller screens */
+    }
+
+    .hero-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;  /* Keeps image proportionate */
     }
 
     section {
@@ -145,14 +151,17 @@
       text-decoration: underline;
     }
 
+    /* RESPONSIVE */
     @media (max-width: 900px) {
       .hero {
         flex-direction: column;
         text-align: center;
       }
+
       .hero-img {
-        width: 65%;
-        height: 350px;
+        width: 150px;
+        height: 200px;
+        margin-top: 20px;
       }
     }
   </style>
@@ -205,14 +214,11 @@
     <p class="subtitle">Here are a few selected GIS projects from my coursework and research.</p>
 
     <div class="grid">
-
-      <!-- New Projects -->
-    <div class="card">
-  <h3>Shake Shack’s Network Analysis in NYC</h3>
-  <p>Performed network analysis to assess which Shake Shack locations in NYC should close based on service area, demographics, and median income.</p>
-  <a href="ShakeShack.html" class="btn" style="margin-top:15px;">View Project</a>
-</div>
-
+      <div class="card">
+        <h3>Shake Shack’s Network Analysis in NYC</h3>
+        <p>Performed network analysis to assess which Shake Shack locations in NYC should close based on service area, demographics, and median income.</p>
+        <a href="ShakeShack.html" class="btn" style="margin-top:15px;">View Project</a>
+      </div>
 
       <div class="card">
         <h3>Sea Level Rise Impact in Boston</h3>
@@ -225,10 +231,10 @@
         <p>Visualized and analyzed various demographic variables for New York City, including income, educational attainment, and age distribution.</p>
         <a href="project-nyc-demographics.html" class="btn" style="margin-top:15px;">View</a>
       </div>
-
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     © <span id="year"></span> Bella Dougherty · 
     Email: <a href="mailto:belladougherty222@gmail.com">belladougherty222@gmail.com</a> · 
@@ -241,5 +247,4 @@
 
 </body>
 </html>
-
 
