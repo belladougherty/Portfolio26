@@ -13,7 +13,6 @@
       color: #222;
     }
 
-    /* NAVBAR */
     nav {
       display: flex;
       justify-content: space-between;
@@ -38,7 +37,6 @@
       color: #0077b6;
     }
 
-    /* HEADER */
     .header {
       text-align: center;
       padding: 60px 20px;
@@ -58,7 +56,6 @@
       line-height: 1.6;
     }
 
-    /* PROJECT CONTENT */
     section {
       padding: 60px 12%;
     }
@@ -72,7 +69,6 @@
     .content {
       max-width: 1000px;
       margin: 0 auto;
-      text-align: left;
     }
 
     .content p {
@@ -101,7 +97,7 @@
       transform: translateY(-3px);
     }
 
-    .card img, .card iframe {
+    .card iframe {
       width: 100%;
       border-radius: 10px;
       margin-top: 10px;
@@ -127,7 +123,7 @@
 
   <!-- NAVIGATION -->
   <nav>
-    <div style="font-weight: 700; font-size: 18px;">Bella Dougherty</div>
+    <div style="font-weight:700;font-size:18px;">Bella Dougherty</div>
     <div>
       <a href="index.html">Home</a>
       <a href="Projects.html">Projects</a>
@@ -137,11 +133,11 @@
     </div>
   </nav>
 
-  <!-- PAGE HEADER -->
+  <!-- HEADER -->
   <section class="header">
     <h1>Various Visualized Demographics for NYC</h1>
     <p>
-      Census data visualizations exploring age distribution, income levels, and educational attainment across New York City.
+      Census data visualizations analyzing housing availability, vacancy rates, and population under 18 across New York City.
     </p>
   </section>
 
@@ -150,47 +146,47 @@
     <h2>Project Overview</h2>
     <div class="content">
       <p>
-        This project visualizes and analyzes key demographic variables for New York City using U.S. Census data. 
-        The focus is on understanding spatial patterns in age distribution, income levels, and educational attainment.
+        This project explores multiple demographic indicators using U.S. Census data to better understand housing patterns
+        and population distribution throughout New York City.
       </p>
       <p>
-        GIS tools such as ArcGIS and QGIS were used to create thematic maps that highlight demographic variation across neighborhoods and boroughs. 
-        These visualizations support data-driven insights into social and economic trends within NYC.
+        GIS-based thematic mapping techniques were used to visualize total housing units, vacant housing units,
+        and the distribution of residents under the age of 18 by census tract.
       </p>
     </div>
   </section>
 
-  <!-- ANALYSIS RESULTS -->
+  <!-- PDF VISUALIZATIONS -->
   <section>
     <h2>PDF Analysis Visualizations</h2>
     <p style="text-align:center;">
-      Click the links below or view the embedded PDFs for detailed demographic analysis.
+      Click the links below or view the embedded PDFs for detailed demographic maps.
     </p>
 
     <div class="grid">
 
-      <!-- Age Distribution -->
+      <!-- Total Housing Units -->
       <div class="card">
-        <h3>Age Distribution</h3>
-        <p>Visualization of age groups across New York City neighborhoods.</p>
-        <a href="NYC_Age_Distribution.pdf" target="_blank">View PDF</a>
-        <iframe src="NYC_Age_Distribution.pdf" height="300px"></iframe>
+        <h3>Total Housing Units</h3>
+        <p>Map displaying the total number of housing units by census tract in NYC.</p>
+        <a href="totnumofhousingunits.pdf" target="_blank">View PDF</a>
+        <iframe src="totnumofhousingunits.pdf" height="300px"></iframe>
       </div>
 
-      <!-- Income Levels -->
+      <!-- Vacant Housing Units -->
       <div class="card">
-        <h3>Income Levels</h3>
-        <p>Median household income and income distribution across NYC.</p>
-        <a href="NYC_Income_Levels.pdf" target="_blank">View PDF</a>
-        <iframe src="NYC_Income_Levels.pdf" height="300px"></iframe>
+        <h3>Vacant Housing Units</h3>
+        <p>Visualization of vacant housing units across New York City census tracts.</p>
+        <a href="totnumofvacanthousingunits.pdf" target="_blank">View PDF</a>
+        <iframe src="totnumofvacanthousingunits.pdf" height="300px"></iframe>
       </div>
 
-      <!-- Educational Attainment -->
+      <!-- Population Under 18 -->
       <div class="card">
-        <h3>Educational Attainment</h3>
-        <p>Educational achievement levels across NYC census tracts.</p>
-        <a href="NYC_Educational_Attainment.pdf" target="_blank">View PDF</a>
-        <iframe src="NYC_Educational_Attainment.pdf" height="300px"></iframe>
+        <h3>Population Under Age 18</h3>
+        <p>Distribution of residents under 18 years old by census tract.</p>
+        <a href="popunder18censustract.pdf.pdf" target="_blank">View PDF</a>
+        <iframe src="popunder18censustract.pdf.pdf" height="300px"></iframe>
       </div>
 
     </div>
@@ -209,3 +205,4 @@
 
 </body>
 </html>
+
