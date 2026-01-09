@@ -52,6 +52,11 @@
       letter-spacing: 1px;
     }
 
+    .drone-img,
+    .image-card img {
+      cursor: pointer;
+    }
+
     .drone-img {
       width: 300px;
       height: 200px;
@@ -120,6 +125,23 @@
       color: #eee;
       text-decoration: underline;
     }
+
+    /* LIGHTBOX */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
   </style>
 </head>
 
@@ -131,7 +153,7 @@
     <div>
       <a href="index.html">Home</a>
       <a href="Projects.html">Projects</a>
-      <a href="about.html">About</a>
+      <a href="Aboutme.html">About</a>
       <a href="resume.html">Resume</a>
       <a href="DRONE.html">Drone</a>
       <a href="contact.html">Contact</a>
@@ -141,40 +163,43 @@
   <main>
     <h1>My Drone Experience</h1>
 
-    <!-- Drone Hero Image -->
+    <!-- Hero Image -->
     <div class="drone-img">
-      <img src="IMG_2562.jpeg" alt="My Drone">
+      <img src="IMG_2562.jpeg" alt="My Drone" onclick="openLightbox(this.src)">
     </div>
 
-    <!-- Certification Number -->
     <div class="cert-number">
       Drone Certification Number: 12345ABC
     </div>
 
-    <!-- Intro -->
     <p class="intro">
       I really enjoy flying my drone, capturing aerial perspectives, and exploring landscapes from above.
       Below are some of my favorite shots!
     </p>
 
-    <!-- Drone Images -->
+    <!-- Drone Gallery -->
     <div class="image-section">
       <div class="image-card">
-        <img src="2026-01-09-12-50-03-025.jpeg" alt="Aerial drone photo 1">
+        <img src="2026-01-09-12-50-03-025.jpeg" alt="Aerial drone photo 1" onclick="openLightbox(this.src)">
         <div class="image-caption">Aerial view captured during flight</div>
       </div>
 
       <div class="image-card">
-        <img src="2026-01-09-13-05-57-229.jpeg" alt="Aerial drone photo 2">
+        <img src="2026-01-09-13-05-57-229.jpeg" alt="Aerial drone photo 2" onclick="openLightbox(this.src)">
         <div class="image-caption">Landscape perspective from above</div>
       </div>
 
       <div class="image-card">
-        <img src="2026-01-09-12-55-39-076.jpeg" alt="Aerial drone photo 3">
+        <img src="2026-01-09-12-55-39-076.jpeg" alt="Aerial drone photo 3" onclick="openLightbox(this.src)">
         <div class="image-caption">High-altitude drone imagery</div>
       </div>
     </div>
   </main>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="">
+  </div>
 
   <footer>
     Questions or opportunities? Email me at
@@ -182,6 +207,23 @@
       belladougherty222@gmail.com
     </a>.
   </footer>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById("lightbox-img").src = src;
+      document.getElementById("lightbox").style.display = "flex";
+    }
+
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        closeLightbox();
+      }
+    });
+  </script>
 
 </body>
 </html>
