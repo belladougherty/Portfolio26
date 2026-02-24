@@ -142,7 +142,7 @@
     <h1>Bigfoot Spatial Analysis</h1>
     <p>
       Spatial analysis of reported Bigfoot sightings to identify clustering
-      patterns and relationships with terrain, elevation, and forest cover.
+      patterns and relationships with terrain, elevation, forest cover, and soil type.
     </p>
   </section>
 
@@ -157,8 +157,13 @@
       </p>
       <p>
         Kernel density estimation and terrain analysis were used to evaluate whether
-        sightings correlate with forested regions, elevation, and landscape features.
-        The goal was to explore how spatial tools can be applied to unconventional datasets.
+        sightings correlate with forested regions, elevation, landscape features, 
+        and soil type. Soil type data is available in raster format from the US 
+        Department of Agriculture's Natural Resources Conservation Service (NRCS). 
+        Incorporating soil type into the suitability model would involve normalizing 
+        the raster, assigning weights based on importance, combining it with the 
+        other criteria using a weighted overlay approach, and calculating a final 
+        suitability score for each cell.
       </p>
     </div>
   </section>
@@ -166,35 +171,19 @@
   <!-- ANALYSIS RESULTS -->
   <section>
 
-    <h2>PDF Analysis Visualizations</h2>
+    <h2>Overall Habitat Suitability Map</h2>
     <p style="text-align:center;">
-      Click the links below or view the embedded PDFs for detailed spatial analysis results.
+      The PDF below shows the final Bigfoot habitat suitability map, combining elevation, slope, landcover, roads, populated places, and soil type.
     </p>
 
     <div class="grid">
 
-      <!-- Bigfoot Sightings Locations -->
+      <!-- Overall Suitability Map -->
       <div class="card">
-        <h3>Bigfoot Sightings Locations</h3>
-        <p>PDF showing the geographic distribution of reported Bigfoot sightings.</p>
-        <a href="BigfootSightingsLocations.pdf" target="_blank">View PDF</a>
-        <iframe src="BigfootSightingsLocations.pdf" height="300px"></iframe>
-      </div>
-
-      <!-- Kernel Density Analysis -->
-      <div class="card">
-        <h3>Kernel Density Analysis</h3>
-        <p>PDF visualizing clustering patterns of Bigfoot sightings across regions.</p>
-        <a href="BigfootKernelDensity.pdf" target="_blank">View PDF</a>
-        <iframe src="BigfootKernelDensity.pdf" height="300px"></iframe>
-      </div>
-
-      <!-- Terrain & Elevation Analysis -->
-      <div class="card">
-        <h3>Terrain and Elevation Analysis</h3>
-        <p>PDF examining elevation and terrain characteristics associated with sightings.</p>
-        <a href="BigfootTerrainElevation.pdf" target="_blank">View PDF</a>
-        <iframe src="BigfootTerrainElevation.pdf" height="300px"></iframe>
+        <h3>Bigfoot Habitat Suitability</h3>
+        <p>PDF showing the combined analysis of all criteria for Bigfoot habitat suitability.</p>
+        <a href="BigfootHabitatSuitability.pdf" target="_blank">View PDF</a>
+        <iframe src="BigfootHabitatSuitability.pdf" height="400px"></iframe>
       </div>
 
     </div>
