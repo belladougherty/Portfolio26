@@ -101,11 +101,16 @@
       transform: translateY(-3px);
     }
 
-    .card img,
-    .card iframe {
-      width: 100%;
-      border-radius: 10px;
+    .card a {
+      display: inline-block;
       margin-top: 10px;
+      text-decoration: none;
+      color: #0077b6;
+      font-weight: 500;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
     }
 
     footer {
@@ -168,53 +173,46 @@
 
   <!-- ANALYSIS RESULTS -->
   <section>
-
-    <h2>PDF Analysis Visualizations</h2>
+    <h2>Project Reports</h2>
     <p style="text-align:center;">
-      View the embedded PDFs below for city-specific urban heat island analysis
-      and comparative results.
+      Click on each link below to view the full project report for each city and the comparative summary.
     </p>
 
     <div class="grid">
 
       <!-- Seattle -->
       <div class="card">
-        <h3>Seattle Urban Heat Island Analysis</h3>
+        <h3>Seattle Urban Heat Island Report</h3>
         <p>Land surface temperature patterns and mitigation strategies in Seattle.</p>
-        <a href="SeattleUHI.pdf" target="_blank">View PDF</a>
-        <iframe src="SeattleUHI.pdf" height="300px"></iframe>
+        <a href="SeattleUHI_Report.html" target="_blank">View Report</a>
       </div>
 
       <!-- El Paso -->
       <div class="card">
-        <h3>El Paso Urban Heat Island Analysis</h3>
+        <h3>El Paso Urban Heat Island Report</h3>
         <p>Urban heat intensity and land cover relationships in El Paso.</p>
-        <a href="ElPasoUHI.pdf" target="_blank">View PDF</a>
-        <iframe src="ElPasoUHI.pdf" height="300px"></iframe>
+        <a href="ElPasoUHI_Report.html" target="_blank">View Report</a>
       </div>
 
       <!-- Jackson -->
       <div class="card">
-        <h3>Jackson Urban Heat Island Analysis</h3>
+        <h3>Jackson Urban Heat Island Report</h3>
         <p>Assessment of urban heat patterns and mitigation opportunities in Jackson.</p>
-        <a href="JacksonUHI.pdf" target="_blank">View PDF</a>
-        <iframe src="JacksonUHI.pdf" height="300px"></iframe>
+        <a href="JacksonUHI_Report.html" target="_blank">View Report</a>
       </div>
 
       <!-- Norfolk -->
       <div class="card">
-        <h3>Norfolk Urban Heat Island Analysis</h3>
+        <h3>Norfolk Urban Heat Island Report</h3>
         <p>Urban heat exposure and land use influences in Norfolk.</p>
-        <a href="NorfolkUHI.pdf" target="_blank">View PDF</a>
-        <iframe src="NorfolkUHI.pdf" height="300px"></iframe>
+        <a href="NorfolkUHI_Report.html" target="_blank">View Report</a>
       </div>
 
       <!-- Comparative Summary -->
       <div class="card">
-        <h3>Comparative UHI Summary</h3>
+        <h3>Comparative UHI Summary Report</h3>
         <p>Comparison of mitigation effectiveness across all four cities.</p>
-        <a href="UHIComparisonSummary.pdf" target="_blank">View PDF</a>
-        <iframe src="UHIComparisonSummary.pdf" height="300px"></iframe>
+        <a href="UHIComparison_Report.html" target="_blank">View Report</a>
       </div>
 
     </div>
