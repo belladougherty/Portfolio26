@@ -101,11 +101,16 @@
       transform: translateY(-3px);
     }
 
-    .card img,
-    .card iframe {
-      width: 100%;
-      border-radius: 10px;
+    .card a {
+      display: inline-block;
       margin-top: 10px;
+      text-decoration: none;
+      color: #0077b6;
+      font-weight: 500;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
     }
 
     footer {
@@ -152,50 +157,45 @@
     <h2>Project Overview</h2>
     <div class="content">
       <p>
-        This project focuses on processing LiDAR point cloud data to create
-        a bare earth digital elevation model (DEM) by removing surface objects
-        such as buildings and vegetation.
+        This project focuses on processing LiDAR point cloud data from the National Map to create
+        a bare earth digital terrain model (DTM) in Coralville by separating ground returns from
+        above-ground features.
       </p>
       <p>
-        Feature extraction techniques were applied to identify key landscape
-        elements, including elevation contours, vegetation layers, and built
-        structures, supporting terrain analysis and environmental modeling.
+        Feature extraction techniques were applied to identify buildings, vegetation, and
+        contours, supporting future spatial analyses and figure generation for subsequent assignments.
       </p>
     </div>
   </section>
 
-  <!-- ANALYSIS RESULTS -->
+  <!-- PROJECT REPORTS -->
   <section>
-
-    <h2>PDF Analysis Visualizations</h2>
+    <h2>Project Reports</h2>
     <p style="text-align:center;">
-      View the embedded PDFs below for bare earth models and extracted features.
+      Click the links below to view the full reports for each stage of the project.
     </p>
 
     <div class="grid">
 
-      <!-- LiDAR Point Cloud -->
+      <!-- LiDAR Classification -->
       <div class="card">
-        <h3>LiDAR Point Cloud Classification</h3>
-        <p>PDF illustrating classified LiDAR point cloud data.</p>
-        <a href="LiDARPointCloudClassification.pdf" target="_blank">View PDF</a>
-        <iframe src="LiDARPointCloudClassification.pdf" height="300px"></iframe>
+        <h3>LiDAR Point Cloud Classification Report</h3>
+        <p>Report describing the classification of LiDAR returns into ground and above-ground features.</p>
+        <a href="LiDARPointCloudClassification_Report.html" target="_blank">View Report</a>
       </div>
 
-      <!-- Bare Earth DEM -->
+      <!-- Bare Earth DTM -->
       <div class="card">
-        <h3>Bare Earth Digital Elevation Model</h3>
-        <p>PDF showing the generated bare earth DEM after feature removal.</p>
-        <a href="BareEarthDEM.pdf" target="_blank">View PDF</a>
-        <iframe src="BareEarthDEM.pdf" height="300px"></iframe>
+        <h3>Bare Earth Digital Terrain Model Report</h3>
+        <p>Report showing the generation of the bare earth DTM after removing surface features.</p>
+        <a href="BareEarthDTM_Report.html" target="_blank">View Report</a>
       </div>
 
-      <!-- Feature Extractions -->
+      <!-- Feature Extraction -->
       <div class="card">
-        <h3>Extracted Surface Features</h3>
-        <p>PDF highlighting extracted buildings, vegetation, and contours.</p>
-        <a href="FeatureExtractions.pdf" target="_blank">View PDF</a>
-        <iframe src="FeatureExtractions.pdf" height="300px"></iframe>
+        <h3>Feature Extraction Report</h3>
+        <p>Report highlighting extracted buildings, vegetation, and terrain contours.</p>
+        <a href="FeatureExtraction_Report.html" target="_blank">View Report</a>
       </div>
 
     </div>
