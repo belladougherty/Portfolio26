@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bigfoot Spatial Analysis | Bella Dougherty</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fafafa;
+      color: #222;
+    }
+
+    /* NAVBAR */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 40px;
+      background: white;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin-left: 20px;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #0077b6;
+    }
+
+    /* HEADER */
+    .header {
+      text-align: center;
+      padding: 60px 20px;
+      background: #0077b6;
+      color: white;
+    }
+
+    .header h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      font-size: 18px;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* PROJECT CONTENT */
+    section {
+      padding: 60px 12%;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .content {
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .content p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #e5e5e5;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      border-color: #bbb;
+      transform: translateY(-3px);
+    }
+
+    .card img, .card iframe {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      padding: 35px;
+      text-align: center;
+      margin-top: 50px;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #e8e8e8;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div style="font-weight: 700; font-size: 18px;">Bella Dougherty</div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="Projects.html">Projects</a>
+      <a href="Aboutme.html">About</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="header">
+    <h1>Bigfoot Spatial Analysis</h1>
+    <p>
+      Spatial analysis of reported Bigfoot sightings to identify clustering
+      patterns and relationships with terrain, elevation, and forest cover.
+    </p>
+  </section>
+
+  <!-- PROJECT OVERVIEW -->
+  <section>
+    <h2>Project Overview</h2>
+    <div class="content">
+      <p>
+        This project examines reported Bigfoot sightings across the United States
+        using spatial analysis techniques to identify geographic clustering and
+        environmental patterns.
+      </p>
+      <p>
+        Kernel density estimation and terrain analysis were used to evaluate whether
+        sightings correlate with forested regions, elevation, and landscape features.
+        The goal was to explore how spatial tools can be applied to unconventional datasets.
+      </p>
+    </div>
+  </section>
+
+  <!-- ANALYSIS RESULTS -->
+  <section>
+
+    <h2>PDF Analysis Visualizations</h2>
+    <p style="text-align:center;">
+      Click the links below or view the embedded PDFs for detailed spatial analysis results.
+    </p>
+
+    <div class="grid">
+
+      <!-- Bigfoot Sightings Locations -->
+      <div class="card">
+        <h3>Bigfoot Sightings Locations</h3>
+        <p>PDF showing the geographic distribution of reported Bigfoot sightings.</p>
+        <a href="BigfootSightingsLocations.pdf" target="_blank">View PDF</a>
+        <iframe src="BigfootSightingsLocations.pdf" height="300px"></iframe>
+      </div>
+
+      <!-- Kernel Density Analysis -->
+      <div class="card">
+        <h3>Kernel Density Analysis</h3>
+        <p>PDF visualizing clustering patterns of Bigfoot sightings across regions.</p>
+        <a href="BigfootKernelDensity.pdf" target="_blank">View PDF</a>
+        <iframe src="BigfootKernelDensity.pdf" height="300px"></iframe>
+      </div>
+
+      <!-- Terrain & Elevation Analysis -->
+      <div class="card">
+        <h3>Terrain and Elevation Analysis</h3>
+        <p>PDF examining elevation and terrain characteristics associated with sightings.</p>
+        <a href="BigfootTerrainElevation.pdf" target="_blank">View PDF</a>
+        <iframe src="BigfootTerrainElevation.pdf" height="300px"></iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © <span id="year"></span> Bella Dougherty · 
+    Email: <a href="mailto:belladougherty222@gmail.com">belladougherty222@gmail.com</a> · 
+    Call: <a href="tel:13194314139">319.431.4139</a>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
