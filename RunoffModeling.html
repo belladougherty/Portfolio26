@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Runoff Modeling | Bella Dougherty</title>
+  <title>Flood Analysis of Cedar Rapids | Bella Dougherty</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <style>
@@ -101,11 +101,16 @@
       transform: translateY(-3px);
     }
 
-    .card img,
-    .card iframe {
-      width: 100%;
-      border-radius: 10px;
+    .card a {
+      display: inline-block;
       margin-top: 10px;
+      text-decoration: none;
+      color: #0077b6;
+      font-weight: 500;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
     }
 
     footer {
@@ -140,10 +145,9 @@
 
   <!-- PAGE HEADER -->
   <section class="header">
-    <h1>Runoff Modeling</h1>
+    <h1>Flood Analysis of Cedar Rapids</h1>
     <p>
-      Hydrologic modeling of surface runoff using elevation, slope,
-      soil characteristics, and rainfall data to assess flood risk.
+      Evaluating flood hazard in downtown Cedar Rapids using LiDAR-derived elevation data and flow modeling.
     </p>
   </section>
 
@@ -152,59 +156,51 @@
     <h2>Project Overview</h2>
     <div class="content">
       <p>
-        This project models surface runoff to understand how water flows
-        across the landscape under various terrain and soil conditions.
-        Digital elevation models (DEMs) were used to calculate slope,
-        flow direction, and flow accumulation.
+        This project analyzes flood hazard in Cedar Rapids, Iowa, particularly downtown along the Cedar River, 
+        using LiDAR-derived elevation data combined with relevant geospatial datasets.
       </p>
       <p>
-        By integrating rainfall and soil permeability data, the analysis
-        identifies areas with high runoff potential and increased flood risk,
-        supporting watershed management and urban planning decisions.
+        Flow modeling identifies low-lying areas susceptible to flooding by examining topography, slope, 
+        and impervious surfaces, assessing how these factors influence runoff accumulation and concentration.
       </p>
     </div>
   </section>
 
-  <!-- ANALYSIS RESULTS -->
+  <!-- PROJECT REPORTS -->
   <section>
-
-    <h2>PDF Analysis Visualizations</h2>
+    <h2>Project Reports</h2>
     <p style="text-align:center;">
-      View the embedded PDFs below for runoff modeling outputs and hydrologic analysis.
+      Click the links below to view the full reports for each stage of the flood analysis project.
     </p>
 
     <div class="grid">
 
       <!-- DEM -->
       <div class="card">
-        <h3>Digital Elevation Model (DEM)</h3>
-        <p>PDF showing the DEM used for runoff and hydrologic analysis.</p>
-        <a href="RunoffDEM.pdf" target="_blank">View PDF</a>
-        <iframe src="RunoffDEM.pdf" height="300px"></iframe>
+        <h3>Digital Elevation Model Report</h3>
+        <p>Report showing the DEM used for flow modeling and flood analysis.</p>
+        <a href="CedarRapidsDEM_Report.html" target="_blank">View Report</a>
       </div>
 
       <!-- Flow Direction -->
       <div class="card">
-        <h3>Flow Direction</h3>
-        <p>PDF illustrating flow direction derived from elevation data.</p>
-        <a href="FlowDirection.pdf" target="_blank">View PDF</a>
-        <iframe src="FlowDirection.pdf" height="300px"></iframe>
+        <h3>Flow Direction Report</h3>
+        <p>Report illustrating flow direction derived from elevation data.</p>
+        <a href="CedarRapidsFlowDirection_Report.html" target="_blank">View Report</a>
       </div>
 
       <!-- Flow Accumulation -->
       <div class="card">
-        <h3>Flow Accumulation</h3>
-        <p>PDF identifying areas of concentrated surface runoff.</p>
-        <a href="FlowAccumulation.pdf" target="_blank">View PDF</a>
-        <iframe src="FlowAccumulation.pdf" height="300px"></iframe>
+        <h3>Flow Accumulation Report</h3>
+        <p>Report identifying areas of concentrated surface runoff.</p>
+        <a href="CedarRapidsFlowAccumulation_Report.html" target="_blank">View Report</a>
       </div>
 
-      <!-- Runoff Risk -->
+      <!-- Runoff/Flood Risk -->
       <div class="card">
-        <h3>Runoff Risk Assessment</h3>
-        <p>PDF highlighting zones with elevated runoff and flooding potential.</p>
-        <a href="RunoffRiskAssessment.pdf" target="_blank">View PDF</a>
-        <iframe src="RunoffRiskAssessment.pdf" height="300px"></iframe>
+        <h3>Flood Risk Assessment Report</h3>
+        <p>Report highlighting areas with elevated flood risk and potential runoff hazards.</p>
+        <a href="CedarRapidsFloodRisk_Report.html" target="_blank">View Report</a>
       </div>
 
     </div>
