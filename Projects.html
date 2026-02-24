@@ -1,411 +1,83 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Projects | Bella Dougherty</title>
-  
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #fafafa;
-      color: #222;
-    }
+<div class="grid">
 
-    /* NAVBAR */
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 40px;
-      background-color: white;
-      border-bottom: 1px solid #ddd;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #333;
-      margin-left: 20px;
-      font-size: 15px;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: #0077b6;
-    }
-
-    /* PAGE LAYOUT */
-    main {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 60px 20px 80px;
-    }
-
-    h1 {
-      font-size: 38px;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-
-    .subtitle {
-      font-size: 16px;
-      color: #777;
-      margin-bottom: 30px;
-      max-width: 650px;
-    }
-
-    h2 {
-      font-size: 26px;
-      margin-top: 40px;
-      margin-bottom: 10px;
-    }
-
-    /* GRID */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
-      margin-top: 15px;
-    }
-
-    .card {
-      background-color: white;
-      padding: 18px;
-      border-radius: 10px;
-      border: 1px solid #e5e5e5;
-      transition: 0.2s;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .card:hover {
-      border-color: #bbb;
-      transform: translateY(-3px);
-    }
-
-    .thumb-placeholder {
-      width: 100%;
-      height: 150px;
-      border-radius: 8px;
-      background: #e5e5e5;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      color: #666;
-      border: 1px dashed #ccc;
-    }
-
-    .card h3 {
-      margin: 0;
-      font-size: 18px;
-    }
-
-    .card .tagline {
-      font-size: 14px;
-      color: #777;
-    }
-
-    .card p {
-      color: #555;
-      font-size: 15px;
-      margin: 0;
-    }
-
-    .meta {
-      font-size: 13px;
-      color: #777;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 16px;
-      font-size: 14px;
-      border-radius: 6px;
-      text-decoration: none;
-      background: #0077b6;
-      color: white;
-      cursor: pointer;
-      border: none;
-      align-self: flex-start;
-    }
-
-    .btn:hover {
-      background: #005f8c;
-    }
-
-    .coming-soon {
-      font-size: 13px;
-      color: #999;
-      margin-top: 6px;
-    }
-
-    footer {
-      background-color: #111;
-      color: #eee;
-      text-align: center;
-      padding: 30px 10px;
-      margin-top: 40px;
-      font-size: 14px;
-    }
-
-    footer a {
-      color: #f3f4f6;
-      text-decoration: underline;
-    }
-
-    footer a:hover {
-      color: #e0f2fe;
-    }
-
-    /* iframe styling for embedded PDFs */
-    .pdf-embed {
-      width: 100%;
-      height: 200px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- NAV -->
-  <nav>
-    <div style="font-weight: 700; font-size: 18px;">Bella Dougherty</div>
-    <div>
-      <a href="index.html">Home</a>
-      <a href="Projects.html">Projects</a>
-      <a href="Aboutme.html">About</a>
-      <a href="DRONE.html">Drone</a>
-      <a href="resume.html">Resume</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </nav>
-
-  <main>
-    <h1>Projects</h1>
-    <p class="subtitle">
-      A closer look at several GIS and spatial analysis projects, including network analysis, flood risk assessments, demographic studies, and more.
+  <!-- Shake Shack -->
+  <div class="card">
+    <iframe src="ShakeShackLocationsinNYC.pdf" class="pdf-embed"></iframe>
+    <h3>Shake Shack Network Analysis in NYC</h3>
+    <div class="tagline">Network Analysis · Service Areas · Demographics</div>
+    <p>
+      Conducted a network analysis to evaluate Shake Shack locations across NYC,
+      analyzing accessibility, service coverage, and surrounding demographic patterns.
     </p>
+    <div class="meta">Tools: ArcGIS, QGIS, Census Data</div>
+    <a href="ShakeShack.html" class="btn">View Project</a>
+    <a href="ShakeShackLocationsinNYC.pdf" target="_blank" class="btn" style="margin-top:5px;">Open PDF</a>
+  </div>
 
-    <div class="grid">
+  <!-- Bigfoot -->
+  <div class="card">
+    <div class="thumb-placeholder">Bigfoot Sightings Map</div>
+    <h3>Bigfoot Spatial Analysis</h3>
+    <div class="tagline">Spatial Patterns · Kernel Density · Terrain</div>
+    <p>
+      Mapped reported Bigfoot sightings to identify spatial clustering patterns
+      and correlations with terrain, forest density, and elevation.
+    </p>
+    <div class="meta">Tools: GIS, Kernel Density, DEM Data</div>
+    <a href="Bigfoot.html" class="btn">View Project (coming soon)</a>
+  </div>
 
-      <!-- Shake Shack Network Analysis -->
-      <div class="card">
-        <iframe src="ShakeShackLocationsinNYC.pdf" class="pdf-embed"></iframe>
-        <h3>Shake Shack’s Network Analysis in NYC</h3>
-        <div class="tagline">Network Analysis · Demographics · GIS</div>
-        <p>
-          Performed network analysis to assess which Shake Shack locations in NYC should close based on service area, demographics, and median income.
-        </p>
-        <div class="meta">Tools: ArcGIS, QGIS, demographic data</div>
-        <a href="ShakeShack.html" class="btn">View Project</a>
-        <a href="ShakeShackLocationsinNYC.pdf" target="_blank" class="btn" style="margin-top:5px;">Open PDF</a>
-        <div class="coming-soon">Embedded PDF of Shake Shack locations in NYC.</div>
-      </div>
+  <!-- Methods for Reducing Urban Heat Islands -->
+  <div class="card">
+    <div class="thumb-placeholder">Urban Heat Island Comparison Map</div>
+    <h3>Methods for Reducing Urban Heat Islands</h3>
+    <div class="tagline">Urban Climate · Policy Comparison · Sustainability</div>
+    <p>
+      Compared mitigation strategies across Seattle, El Paso, Jackson, and Norfolk
+      to evaluate the effectiveness of cooling initiatives and green infrastructure.
+    </p>
+    <div class="meta">Tools: Landsat, Climate Data, GIS Analysis</div>
+    <a href="UHIcomparison.html" class="btn">View Project (coming soon)</a>
+  </div>
 
-      <!-- Sea Level Rise in Boston -->
-      <div class="card">
-        <div class="thumb-placeholder">Sea level rise map (Boston, Placeholder)</div>
-        <h3>Sea Level Rise Impact in Boston</h3>
-        <div class="tagline">Environmental Impact · DEM · Flooding Models</div>
-        <p>
-          Mapped the potential impact of sea level rise on Boston's land and infrastructure with projections for 1m, 2m, and 3m rises.
-        </p>
-        <div class="meta">Tools: QGIS, LiDAR, sea level rise data</div>
-        <a href="project-sea-level-rise.html" class="btn">View Project (coming soon)</a>
-        <div class="coming-soon">Placeholder for flood models, maps, and analysis.</div>
-      </div>
+  <!-- Bare Earth and Feature Extractions -->
+  <div class="card">
+    <div class="thumb-placeholder">LiDAR Bare Earth Model</div>
+    <h3>Bare Earth and Feature Extractions</h3>
+    <div class="tagline">LiDAR · Raster Processing · Terrain Modeling</div>
+    <p>
+      Processed LiDAR datasets to generate a bare earth model and extract key
+      landscape features including buildings, vegetation, and elevation contours.
+    </p>
+    <div class="meta">Tools: LiDAR, QGIS, Raster Tools</div>
+    <a href="BareEarth.html" class="btn">View Project (coming soon)</a>
+  </div>
 
-      <!-- Demographics of New York City -->
-      <div class="card">
-        <div class="thumb-placeholder">Demographic map of NYC (Placeholder)</div>
-        <h3>Various Visualized Demographics for NYC</h3>
-        <div class="tagline">Census Data · Age Distribution · Income Levels</div>
-        <p>
-          Visualized and analyzed various demographic variables for New York City, including income, educational attainment, and age distribution.
-        </p>
-        <div class="meta">Tools: Census Data, GIS, QGIS</div>
-        <a href="VarioVisualizedDemographicsforNYC.html" class="btn">View Project (coming soon)</a>
-        <div class="coming-soon">Placeholder for demographic maps and analysis results.</div>
-      </div>
+  <!-- Runoff Modeling -->
+  <div class="card">
+    <div class="thumb-placeholder">Runoff & Watershed Model</div>
+    <h3>Runoff Modeling</h3>
+    <div class="tagline">Hydrology · Watershed Analysis · Flow Accumulation</div>
+    <p>
+      Modeled surface runoff patterns using slope, soil, and rainfall data
+      to identify high-risk flooding zones and watershed flow behavior.
+    </p>
+    <div class="meta">Tools: DEM, Flow Accumulation, Hydrology Tools</div>
+    <a href="RunoffModeling.html" class="btn">View Project (coming soon)</a>
+  </div>
 
-      <!-- Gentrification in Brooklyn -->
-      <div class="card">
-        <div class="thumb-placeholder">Gentrification impact map (Brooklyn, Placeholder)</div>
-        <h3>Impact of Gentrification in Brooklyn</h3>
-        <div class="tagline">Socioeconomic Data · Property Values · GIS</div>
-        <p>
-          Visualized the impact of gentrification in Brooklyn, focusing on shifts in property values, rents, and demographic changes.
-        </p>
-        <div class="meta">Tools: GIS, property data, census data</div>
-        <a href="project-gentrification-brooklyn.html" class="btn">View Project (coming soon)</a>
-        <div class="coming-soon">Placeholder for maps and analysis of property changes.</div>
-      </div>
+  <!-- Urban Heat Island in Seattle -->
+  <div class="card">
+    <div class="thumb-placeholder">Seattle Urban Heat Map</div>
+    <h3>Urban Heat Island in Seattle</h3>
+    <div class="tagline">Temperature Analysis · Land Use · Environmental Equity</div>
+    <p>
+      Analyzed land surface temperature data in Seattle to identify urban heat
+      island intensity and correlations with land cover and built infrastructure.
+    </p>
+    <div class="meta">Tools: Landsat 8, GIS, Remote Sensing</div>
+    <a href="SeattleUHI.html" class="btn">View Project (coming soon)</a>
+  </div>
 
-      <!-- Quick Visualizations of Various U.S. National Demographics by State -->
-      <div class="card">
-        <div class="thumb-placeholder">U.S. Demographic Visualizations placeholder</div>
-        <h3>Quick Visualizations of Various U.S. National Demographics by State</h3>
-        <div class="tagline">Census Data · Demographics · State Boundaries</div>
-        <p>
-          Visualizing demographic data for U.S. states, including population breakdowns, median income, educational attainment, and more.
-        </p>
-        <div class="meta">Tools: Tableau, Power BI, ArcGIS</div>
-        <a href="project-demographics.html" class="btn">View Project (coming soon)</a>
-        <div class="coming-soon">Placeholder for charts and maps.</div>
-      </div>
-
-      <!-- Digital Elevation Model (DEM) of Hawaii Island -->
-      <div class="card">
-        <div class="thumb-placeholder">Hawaii Island DEM placeholder</div>
-        <h3>Digital Elevation Model (DEM) of Hawaii Island</h3>
-        <div class="tagline">LiDAR · Urban Planning · Flood Risk</div>
-        <p>
-          Analyzing terrain and urban areas in Hawaii using DEM data to assess flood risks and environmental conservation efforts.
-        </p>
-        <div class="meta">Tools: LiDAR, QGIS, SRTM</div>
-        <a href="DEMofhawaiiisland.html" class="btn">View Project (coming soon)</a>
-        <div class="coming-soon">Placeholder for DEM analysis and flood risk maps.</div>
-      </div>
-
-      <!-- Great Smoky Mountains Hiking and Camping Site Suitability -->
-      <div class="card">
-        <div class="thumb-placeholder">Smoky Mountains Suitability placeholder</div>
-        <h3>Great Smoky Mountains Hiking and Camping Site Suitability</h3>
-        <div class="tagline">Raster Processing · Slope Analysis · Land Use</div>
-        <p>
-          Assessing hiking and camping site suitability in the Great Smoky Mountains based on terrain, vegetation, and land use data.
-        </p>
-        <div class="meta">Tools: QGIS, LiDAR, Land Cover Data</div>
-        <a href="project-smoky-mountains.html" class="btn">View Project (coming soon)</a>
-        <div class="coming-soon">Placeholder for suitability maps and analysis.</div>
-      </div>
-
-      <!-- Road Path from Siliguri (India) to Lhasa (Tibet) via Nepal -->
-      <div class="card">
-        <div class="thumb-placeholder">Road Path placeholder (Siliguri to Lhasa)</div>
-        <h3>Road Path from Siliguri to Lhasa (via Nepal)</h3>
-        <div class="tagline">Least Cost Path · Terrain Analysis · Infrastructure</div>
-        <p>
-          Identifying the optimal road path from Siliguri to Lhasa via Nepal by considering geography, infrastructure, and environmental factors.
-        </p>
-        <div class="meta">Tools: DEM, ArcGIS, Slope Analysis</div>
-        <a href="project-road-path.html" class="btn">View Project (coming soon)</a>
-        <div class="coming-soon">Placeholder for path analysis and maps.</div>
-      </div>
-
-      <!-- Average Temperature Interpolation of Arizona -->
-      <div class="card">
-        <div class="thumb-placeholder">Arizona Temperature placeholder</div>
-        <h3>Average Temperature Interpolation of Arizona</h3>
-        <div class="tagline">Temperature Analysis · Urban Heat Island · Climate Data</div>
-        <p>
-          Interpolating average temperature across Arizona to identify trends like urban heat islands and temperature extremes.
-        </p>
-        <div class="meta">Tools: GIS, Climate Data, QGIS</div>
-        <a href="project-temperature-arizona.html" class="btn">View Project (coming soon)</a>
-        <div class="coming-soon">Placeholder for temperature gradient maps.</div>
-      </div>
-
-      <!-- Mapping Urban Heat Islands (UHIs) in Los Angeles -->
-      <div class="card">
-        <div class="thumb-placeholder">Urban Heat Island placeholder (Los Angeles)</div>
-        <h3>Mapping Urban Heat Islands (UHIs) in Los Angeles</h3>
-        <div class="tagline">Urban Heat · Land Use · Environmental Health</div>
-        <p>
-          Mapping and analyzing urban heat islands in Los Angeles, correlating temperature data with land use, green spaces, and socioeconomic factors.
-        </p>
-        <div class="meta">Tools: Landsat, GIS, Air Quality Data</div>
-        <a href="project-uhi-losangeles.html" class="btn">View Project (coming soon)</a>
-        <div class="coming-soon">Placeholder for heat island maps and temperature data.</div>
-      </div>
-
-      <!-- Flood Risk Analysis for Miami, Florida -->
-      <div class="card">
-        <div class="thumb-placeholder">Miami Flood Risk placeholder</div>
-        <h3>Flood Risk Analysis for Miami, Florida</h3>
-        <div class="tagline">Flood Zones · Climate Projections · Sea-Level Rise</div>
-        <p>
-          Analyzing flood risk in Miami due to rising sea levels, storm surge, and future climate projections, focusing on vulnerable areas.
-        </p>
-        <div class="meta">Tools: FEMA, Climate Data, GIS</div>
-        <a href="project-flood-risk-miami.html" class="btn">View Project (coming soon)</a>
-        <div class="coming-soon">Placeholder for flood risk maps and analysis.</div>
-      </div>
-
-      <!-- Mapping the Air Quality Index (AQI) in Los Angeles -->
-      <div class="card">
-        <div class="thumb-placeholder">AQI Los Angeles placeholder</div>
-        <h3>Mapping the Air Quality Index (AQI) in Los Angeles</h3>
-        <div class="tagline">Air Quality · Health Correlation · Environmental Justice</div>
-        <p>
-          Mapping AQI data for Los Angeles and correlating it with respiratory health outcomes, such as asthma rates and hospital visits.
-        </p>
-        <div class="meta">Tools: AQI Data, GIS, Health Data</div>
-        <a href="project-aqi-la.html" class="btn">View Project (coming soon)</a>
-        <div class="coming-soon">Placeholder for AQI maps and health correlations.</div>
-      </div>
-
-      <!-- Mapping Energy Consumption Patterns Across Texas -->
-      <div class="card">
-        <div class="thumb-placeholder">Texas Energy Consumption placeholder</div>
-        <h3>Mapping Energy Consumption Patterns Across Texas</h3>
-        <div class="tagline">Energy Analysis · Renewable Potential · Infrastructure</div>
-        <p>
-          Analyzing energy consumption patterns across Texas and assessing the potential for renewable energy sources such as solar and wind.
-        </p>
-        <div class="meta">Tools: Energy Data, Wind/Solar Maps, GIS</div>
-        <a href="project-energy-texas.html" class="btn">View Project (coming soon)</a>
-        <div class="coming-soon">Placeholder for energy maps and renewable potential.</div>
-      </div>
-
-      <!-- Analyzing the Impact of Tourism on the Natural Environment in Yosemite National Park -->
-      <div class="card">
-        <div class="thumb-placeholder">Yosemite Tourism Impact placeholder</div>
-        <h3>Analyzing the Impact of Tourism on the Natural Environment in Yosemite National Park</h3>
-        <div class="tagline">Tourism · Environmental Impact · Resource Usage</div>
-        <p>
-          Analyzing the environmental impact of tourism in Yosemite National Park, including visitor concentrations, resource usage, and ecosystem effects.
-        </p>
-        <div class="meta">Tools: GIS, Environmental Data, Visitor Data</div>
-        <a href="project-tourism-yosemite.html" class="btn">View Project (coming soon)</a>
-        <div class="coming-soon">Placeholder for tourism impact maps and data.</div>
-      </div>
-
-      <!-- Analyzing the Impact of Gentrification in Brooklyn, New York -->
-      <div class="card">
-        <div class="thumb-placeholder">Brooklyn Gentrification placeholder</div>
-        <h3>Analyzing the Impact of Gentrification in Brooklyn, New York</h3>
-        <div class="tagline">Gentrification · Property Values · Demographic Shifts</div>
-        <p>
-          Visualizing the impact of gentrification in Brooklyn, focusing on property values, rental trends, and demographic shifts in neighborhoods.
-        </p>
-        <div class="meta">Tools: Real Estate Data, Census Data, GIS</div>
-        <a href="project-gentrification-brooklyn.html" class="btn">View Project (coming soon)</a>
-        <div class="coming-soon">Placeholder for property trends and demographic data.</div>
-      </div>
-
-      <!-- Analyzing Deforestation Trends Around the World -->
-      <div class="card">
-        <div class="thumb-placeholder">Global Deforestation placeholder</div>
-        <h3>Analyzing Deforestation Trends Around the World</h3>
-        <div class="tagline">Deforestation · Satellite Imagery · Environmental Impact</div>
-        <p>
-          Analyzing global deforestation trends and identifying hotspots where forests are disappearing the fastest, including environmental impacts.
-        </p>
-        <div class="meta">Tools: Landsat, Satellite Data, GIS</div>
-        <a href="project-deforestation.html" class="btn">View Project (coming soon)</a>
-        <div class="coming-soon">Placeholder for deforestation trend maps and analysis.</div>
-      </div>
-
-      <!-- Mapping Noise Pollution in U.S. Cities -->
+</div>
      
